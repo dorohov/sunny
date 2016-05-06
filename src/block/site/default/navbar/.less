@@ -145,7 +145,7 @@
 				padding: 15px;
 			}
 		}
-		
+
 	}
 }
 /* -----------------------------------------------------------------------------
@@ -167,7 +167,7 @@
 	margin: 0;
 	padding: 0;
 	width: 96px;
-	height: 96px;
+	height: 66px;
 	font-size: 0;
 	text-indent: -9999px;
 	-webkit-appearance: none;
@@ -181,11 +181,9 @@
 	background: none;
 	@media @media-size-xs{
 		float: right;
-	}
-	@media @media-size-xs-l{
-		height: 66px;
 		width: 86px;
 	}
+	@media @media-size-xs-p{margin-top: 15px}
 	@media @media-screen{
 		display: none;
 	}
@@ -216,8 +214,8 @@
 		&:after {
 			bottom: -20px;
 		}
-
-		@media @media-size-xs-l{			
+			
+		@media @media-size-xs{			
 			height: 5px;
 			top: 30px;
 			&:before,

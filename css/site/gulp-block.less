@@ -1406,7 +1406,7 @@
 				padding: 15px;
 			}
 		}
-		
+
 	}
 }
 /* -----------------------------------------------------------------------------
@@ -1428,7 +1428,7 @@
 	margin: 0;
 	padding: 0;
 	width: 96px;
-	height: 96px;
+	height: 66px;
 	font-size: 0;
 	text-indent: -9999px;
 	-webkit-appearance: none;
@@ -1442,11 +1442,9 @@
 	background: none;
 	@media @media-size-xs{
 		float: right;
-	}
-	@media @media-size-xs-l{
-		height: 66px;
 		width: 86px;
 	}
+	@media @media-size-xs-p{margin-top: 15px}
 	@media @media-screen{
 		display: none;
 	}
@@ -1477,8 +1475,8 @@
 		&:after {
 			bottom: -20px;
 		}
-
-		@media @media-size-xs-l{			
+			
+		@media @media-size-xs{			
 			height: 5px;
 			top: 30px;
 			&:before,
@@ -1593,13 +1591,53 @@
 ._ii__note{
 	font-family: @bebas-bold;
 	color:  #013333;	 
+	margin-top: 20px;
+	overflow: hidden;
+	@media @media-size-xs{	
+		font-size: 24px;
+		line-height: 30px;
+		text-align: center;
+		margin: 0;
+		padding: 15px;		
+		background: rgba(255, 255, 255, 0.8);  
+		max-width: 300px;
+    	margin: 0 auto;
+	}
+	@media @media-size-sm-p{	
+		font-size: 30px;
+		line-height: 33px;
+		margin: 0;
+	}
+	@media @media-size-sm-l{		
+		font-size: 32px;
+		line-height: 35px;
+	}
+	@media @media-size-md{		
+		font-size: 32px;
+		line-height: 35px;
+	}
+	@media @media-size-lg{		
+		font-size: 47px;
+		line-height: 50px;
+	}
+	@media @media-size-xl{		
+		font-size: 52px;
+		line-height: 55px;
+	}
+	@media @media-size-xl1660{		
+		font-size: 72px;
+		line-height: 75px;
+	}
+}
+._ii__note-inner{	
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-	margin-top: 20px;
-	div{
+	div, h1{
 		background: rgba(255, 255, 255, 0.8);   
 		padding: 5px 26px;
+		margin: 0;
+		font-size: inherit;
 		&:nth-child(1){
 			padding: 18px 26px 10px;
 			letter-spacing: 3.1px;
@@ -1618,15 +1656,7 @@
 		}
 	}
 	@media @media-size-xs{	
-		font-size: 24px;
-		line-height: 30px;
-		text-align: center;
-		margin: 0;
-		padding: 15px;		
-		background: rgba(255, 255, 255, 0.8);  
-		max-width: 300px;
-    	margin: 0 auto;
-		div{
+		div,h1{
 			padding: 0 0 5px!important;
 			background: none;
 			letter-spacing: 0!important;
@@ -1641,11 +1671,8 @@
 			}
 		}
 	}
-	@media @media-size-sm-p{	
-		font-size: 30px;
-		line-height: 33px;
-		margin: 0;
-		div{
+	@media @media-size-sm-p{
+		div,h1{
 			&:nth-child(3){
 				padding: 10px 26px;
 				span{
@@ -1654,10 +1681,8 @@
 			}
 		}
 	}
-	@media @media-size-sm-l{		
-		font-size: 32px;
-		line-height: 35px;
-		div{
+	@media @media-size-sm-l{	
+		div,h1{
 			&:nth-child(3){
 				span{
 					font-size: 42px;
@@ -1665,10 +1690,8 @@
 			}
 		}
 	}
-	@media @media-size-md{		
-		font-size: 32px;
-		line-height: 35px;
-		div{
+	@media @media-size-md{	
+		div,h1{
 			&:nth-child(3){
 				span{
 					font-size: 42px;
@@ -1676,18 +1699,9 @@
 			}
 		}
 	}
-	@media @media-size-lg{		
-		font-size: 47px;
-		line-height: 50px;
-	}
-	@media @media-size-xl{		
-		font-size: 52px;
-		line-height: 55px;
-	}
-	@media @media-size-xl1660{		
-		font-size: 72px;
-		line-height: 75px;
-	}
+}
+._ii__btn{
+	overflow: hidden;
 }
 ._ii__btn-dark-blue{
 	line-height: 54px;
@@ -1737,6 +1751,9 @@
 ._in__btn-yellow{
 	text-align: right;
 	overflow: hidden;
+	.btn-yellow{
+		line-height: 60px;
+	}
 	@media @media-size-xs{
 		text-align: center;
 		.btn-yellow{
@@ -1765,7 +1782,7 @@
 }
 ._in__btn-blue{	
 	font-size: 13px;
-	line-height: 60px;	
+	line-height: 60px;
 	@media @media-size-xs{
 		padding: 0 15px;
 	}
