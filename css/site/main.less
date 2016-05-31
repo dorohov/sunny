@@ -43,6 +43,23 @@ body {
     width: 100%;
     height: 100%;
     overflow: hidden;
+    //background: url('@{url-path-img}/index/bg-page.jpg') no-repeat center;
+    background-size: cover !important;
+   	@media @media-screen and (min-aspect-ratio: 5/4){
+		background: url('@{url-path-img}/index/bg-page-5x4.jpg') no-repeat center;
+    }
+   	@media @media-screen and (min-aspect-ratio: 4/3){
+		background: url('@{url-path-img}/index/bg-page-4x3.jpg') no-repeat center;
+    }
+   	@media @media-screen and (min-aspect-ratio: 3/2){
+		background: url('@{url-path-img}/index/bg-page-3x2.jpg') no-repeat center;
+    }
+   	@media @media-screen and (min-aspect-ratio: 16/10){
+		background: url('@{url-path-img}/index/bg-page-16x10.jpg') no-repeat center;
+    }
+   	@media @media-screen and (min-aspect-ratio: 16/9){
+		background: url('@{url-path-img}/index/bg-page-16x9.jpg') no-repeat center;
+    }
     img{
     	position: absolute;
 		height: 96%;
