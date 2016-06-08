@@ -1,5 +1,7 @@
 var h_window = $(window).height(), 
- 	w_window = $(window).width();
+	w_window = $(window).width(),
+	h_navbar = $('.navbar-site').outerHeight(true),
+	h_body = h_window - h_navbar;
 
 /*var h_header = $('.header-site-block').outerHeight(true),
 	h_footer = $('.footer-site').outerHeight(true),
@@ -10,7 +12,7 @@ var h_window = $(window).height(),
 	$("._srcb__dropdown-menu").css("max-width", w_step_drop);
 */
 if (w_window > 767){
-	$(".index-page").css("min-height", h_window);
+	$(".index-page").css("min-height", h_body);
 	//$(".navbar-site").addClass('navbar-fixed-bottom').removeClass('navbar-fixed-top');
 } else {
 	$(".index-page").removeAttr("style");
