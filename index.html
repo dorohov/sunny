@@ -15,9 +15,7 @@
 	</head>
 	<body class="body-index-page">			
 		<div class="index-page">			
-			<div class="index-page-bg">
-				<!--<img src="/img/index/bg-page.jpg" alt=""> -->
-			</div>
+			<div class="index-page-bg"></div>
 			<header class="header-site _index__header-site">
 	<div class="container-fluid">
 		<div class="_cb__flex _hs__flex">
@@ -25,7 +23,7 @@
 				<a class="_cb__col _hs__logo" href="/"><img src="/img/default/logotip.jpg" alt=""></a>
 				<div class="_cb__col _hs__address">
 					<div>г. Тамбов, ул. Студенецкая, 16а, корп. 2, офис 8</div>
-					<div class="_hs__address-link"><a href="#">Офис продаж на карте</a></div>
+					<div class="_hs__address-link"><a href="/contacts.html">Офис продаж на карте</a></div>
 				</div>
 			</div>
 			<div class="_cb__flex _col  _hs__phone-block">
@@ -33,7 +31,7 @@
 					<a href="tel:+74752559707">+7 (4752) 55-97-07</a>
 				</div>
 				<div class="_cb__col">
-					<button type="button" class="btn-site btn-green">Обратный звонок</button>
+					<button type="button" data-toggle="modal" data-target="#modal-reviews" class="btn-site btn-green">Обратный звонок</button>
 				</div>
 			</div>
 		</div>
@@ -50,20 +48,20 @@
 		</div>
 	</div>
 	<div  class="_ii__btn">	
-		<a href="#" class="btn-site btn-dark-blue _ii__btn-dark-blue wow slideInDown" data-wow-delay="1.5s">Выбрать квартиру</a>
+		<a href="/layouts.html" class="btn-site btn-dark-blue _ii__btn-dark-blue wow slideInDown" data-wow-delay="1.5s">Выбрать квартиру</a>
 	</div>
 </div>	
 					<div class="index-news _cb__col">
 	<div class="_in__inner">
 		<div class="_in__btn-yellow">
-			<a href="#" class="btn-site btn-yellow wow slideInDown" data-wow-delay="1.5s">фотогалерея</a>
+			<a href="/gallery.html" class="btn-site btn-yellow wow slideInDown" data-wow-delay="1.5s">фотогалерея</a>
 		</div>
 		<div class="_in__btn-group _cb__flex">
 			<div>
 				<a href="#" class="btn-site btn-blue _in__btn-blue wow slideInLeft" data-wow-delay="1s">Продажа техплощадей</a>
 			</div>
 			<div>				
-				<a href="#" class="btn-site btn-red _in__btn-red wow slideInRight" data-wow-delay="1s">
+				<a href="/hypothec.html" class="btn-site btn-red _in__btn-red wow slideInRight" data-wow-delay="1s">
 					ипотека от
 					<span>12%</span>
 				</a>
@@ -74,22 +72,22 @@
 				<div class="_in__news-carousel-wow wow slideInUp" data-wow-delay="0.5s">
 					<div id="carousel-example-generic" class="_in__carousel carousel slide" data-ride="carousel">
 						<ol class="carousel-indicators">
-								<li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-								<li data-target="#carousel-example-generic" data-slide-to="1"></li>
-								<li data-target="#carousel-example-generic" data-slide-to="2"></li>
+							<li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+							<li data-target="#carousel-example-generic" data-slide-to="1"></li>
+							<li data-target="#carousel-example-generic" data-slide-to="2"></li>
 						</ol>
 						<div class="carousel-inner">
 					    	<article class="item _in__item">
 					    		<div class="_in__item-time">31 марта 2015</div>
-					    		<h4 class="_in__item-heading"><a href="#">Ипотека с господдержкой продлена до конца 2016, допустим вторая или третья строка текста</a></h4>
+					    		<h4 class="_in__item-heading"><a href="/news-item.html">Ипотека с господдержкой продлена до конца 2016, допустим вторая или третья строка текста</a></h4>
 					  		</article>
 					    	<article class="item _in__item">
 					    		<div class="_in__item-time">31 марта 2015</div>
-					    		<h4 class="_in__item-heading"><a href="#">Ипотека с господдержкой продлена до конца 2016, допустим или третья строка текста</a></h4>
+					    		<h4 class="_in__item-heading"><a href="/news-item.html">Ипотека с господдержкой продлена до конца 2016, допустим или третья строка текста</a></h4>
 					  		</article>
 					    	<article class="item _in__item">
 					    		<div class="_in__item-time">31 марта 2015</div>
-					    		<h4 class="_in__item-heading"><a href="#">Ипотека с господдержкой продлена до конца 2016</a></h4>
+					    		<h4 class="_in__item-heading"><a href="/news-item.html">Ипотека с господдержкой продлена до конца 2016</a></h4>
 					  		</article>
 						</div>
 						<a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
@@ -97,8 +95,8 @@
 						<a class="right carousel-control" href="#carousel-example-generic" data-slide="next">
 						</a>
 					</div>
-					<div class="_in__btn-green-block">								
-						<a href="#" class="btn-site btn-green _in__btn-green">
+					<div class="_in__btn-green-block">							
+						<a href="/news.html" class="btn-site btn-green _in__btn-green">
 							все новости
 						</a>
 					</div>
@@ -119,15 +117,33 @@
 	</div>
 	<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 		<ul class="nav navbar-nav _czr__navbar-nav">
-			<li><a href="#" class="icon-location-map">Расположение</a></li>
-			<li><a href="#" class="icon-excavator">Планировки</a></li>
-			<li><a href="#" class="icon-ribbon">Преимущества</a></li>
-			<li><a href="#" class="icon-construction">О застройщике</a></li>
-			<li><a href="#" class="icon-money">Ипотека</a></li>
-			<li><a href="#" class="icon-silhouette">Документы</a></li>
+			<li><a href="/location.html" class="icon-location-map"><span>Расположение</span></a></li>
+			<li><a href="/layouts.html" class="icon-building"><span>Планировки</span></a></li>
+			<li><a href="/advantage.html" class="icon-ribbon"><span>Преимущества</span></a></li>
+			<li><a href="/about.html" class="icon-construction"><span>О застройщике</span></a></li>
+			<li><a href="/hypothec.html" class="icon-money"><span>Ипотека</span></a></li>
+			<li><a href="/doc.html" class="icon-silhouette"><span>Документы</span></a></li>
 		</ul>
 	</div>
 </nav>
+
+		<div class="modal fade" id="modal-reviews" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title" id="myModalLabel">Название модали</h4>
+      </div>
+      <div class="modal-body">
+        ...
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Закрыть</button>
+        <button type="button" class="btn btn-primary">Сохранить изменения</button>
+      </div>
+    </div>
+  </div>
+</div> 
 
 		
 <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->

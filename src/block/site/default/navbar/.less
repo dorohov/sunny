@@ -1,6 +1,8 @@
 .navbar-site{
 	background: @white;
-	//opacity: @opacity;
+	//opacity: @opacity;    
+	padding: 18px 0;
+	border-top: 1px solid #e8e8e8;
 	&.navbar-fixed-bottom{
 		@media @media-size-xs{			
 			bottom: inherit;
@@ -26,22 +28,27 @@
 ._czr__navbar-nav{
 	display: flex;
 	width: 100%;
-	justify-content: space-between;
+	justify-content: center;
 	> li{
+		margin: 0 35px;
 		> a{
 			text-transform: uppercase;
 			font-size: 14px;
 			color: lighten(@black, 20%);
 			//padding: 30px 15px;
 			padding: 20px 15px;
-			letter-spacing: 1px;
+			letter-spacing: 0.7px;
 			transition: @transition-site;
+			span{
+				transition: @transition-site;
+				border-bottom: 1px solid fadeout(@black, 80%);
+			}
 			&:before{
 				font-family: @icon;
 				vertical-align: middle;
 				font-size: 28px;
 				line-height: 28px;
-				margin-right: 15px;
+				margin-right: 20px;
 				color: #50994d;
 				color: @green;
 				transition: @transition-site;
@@ -61,13 +68,14 @@
 					content: @icon-location-map;
 				}
 			}
-			&.icon-excavator{
+			&.icon-building{
 				&:before{
-					content: @icon-excavator;
+					content: @icon-building;
 				}
 			}
 			&.icon-ribbon{
 				&:before{
+					font-size: 40px;
 					content: @icon-ribbon;
 				}
 			}
@@ -83,6 +91,7 @@
 			}
 			&.icon-construction{
 				&:before{
+					font-size: 30px;
 					content: @icon-construction;
 				}
 			}
@@ -91,6 +100,7 @@
 				&:before{
 					color: @dark-blue;					
 				}
+				span{border-color: fadeout(@black, 100%)}
 			}
 			&:hover,
 			&:focus{
@@ -99,13 +109,9 @@
 		}
 		&.active{
 			> a{
-				//color: @white;
-				&:before{
-					color: @dark-blue;					
-				}
-				&:hover{
-					//color: @white;
-				}
+				color: @black;
+				span{border-color: fadeout(@black, 100%)}
+				&:before{color: @dark-blue;}
 			}
 		}
 	}
