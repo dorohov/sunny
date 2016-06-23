@@ -151,9 +151,10 @@
 					display:inline-block;
 					width:1em;
 					height:1em;
-					#fe.bg(@c-hex-w);
+					transition:all @trans-speed ease;
 					border-radius:50%;
 					opacity:0.5;
+					#fe.bg(@c-hex-w);
 				}
 			}
 		}
@@ -258,47 +259,6 @@
 		}
 	}
 }
-/*@keyframes vert-anim {from {visibility:0;opacity:0;}to{visibility:initial;opacity:1;}}*/
-
-.boobs {
-	@a : #d5ac81;
-	@b : #f0e1d1;
-	@c : #f4be98;
-	
-	display:inline-block;
-	margin:2em auto;
-	
-	.item {
-		display:inline-block;
-		#fe.w(20em);
-		#fe.h(20em);
-		#fe.bg(@c);
-		border:2em @b solid;
-		border-radius:50%;
-		position:relative;
-		cursor:pointer;
-		transition:all 0.5s ease;
-		transform-origin:center center;
-		transform:scale(1);
-		
-		.nipple {
-			position:absolute;
-			left:44%;
-			top:44%;
-			#fe.bg(@a);
-			#fe.w(12%);
-			#fe.h(12%);
-			border:.5em @b solid;
-			border-radius:50%;
-		}
-		
-		&:focus {
-			transform:scale(0.8);
-			animation-name: animated-rubberBand;
-		}
-		
-	}
-}
 .btn {
 	/*
 	#fe.color(@c-hex-b);
@@ -325,6 +285,27 @@
 	&:visited {
 		
 	}
+	
+	/*
+	&[data-state="normal"] {
+		
+	}
+	&[data-state="hover"] { // desktop
+		
+	}
+	&[data-state="clicked"] { // desktop
+		
+	}
+	&[data-state="pressed"] { // touch
+		
+	}
+	&[data-state="selected"] {
+		
+	}
+	&[data-state="disabled"] {
+		
+	}
+	*/
 	
 	
 	&.inline {
@@ -590,6 +571,101 @@
 		}
 		
 	}
+}
+.fecss-collapse {
+	position:relative;
+	
+	@media @media-size-xs {
+		&.collapse-xs {
+			.collapser {
+				display:block;
+			}
+			.collapsing {
+				display:none;
+				position:absolute;
+				left:0;
+				top:100%;
+			}
+			&.active {
+				.collapsing {
+					display:block;
+				}
+			}
+		}
+	}
+	
+	@media @media-size-sm {
+		&.collapse-sm {
+			.collapser {
+				display:block;
+			}
+			.collapsing {
+				display:none;
+				position:absolute;
+				left:0;
+				top:100%;
+			}
+			&.active {
+				.collapsing {
+					display:block;
+				}
+			}
+		}
+	}
+	
+	@media @media-size-md {
+		&.collapse-md {
+			.collapser {
+				display:block;
+			}
+			.collapsing {
+				display:none;
+				position:absolute;
+				left:0;
+				top:100%;
+			}
+			&.active {
+				.collapsing {
+					display:block;
+				}
+			}
+		}
+	}
+	
+	@media @media-size-lg {
+		&.collapse-lg {
+			.collapser {
+				display:block;
+			}
+			.collapsing {
+				display:none;
+				position:absolute;
+				left:0;
+				top:100%;
+			}
+			&.active {
+				.collapsing {
+					display:block;
+				}
+			}
+		}
+	}
+	
+	.collapser {
+		position:relative;
+		display:none;
+	}
+	
+	.collapsing {
+		position:relative;
+	}
+	
+}
+.fecss-jssearch {
+	display:inline-block;
+	outline:1px #ffff00 solid;
+	outline-offset:2px;
+	#fe.bg(#ffff00);
 }
 .fecss-modal {
 	position:absolute;
@@ -1083,6 +1159,75 @@
 	}
 	*/
 }
+body {
+	
+	&[class*='theme-'], *[class*='theme-'] {
+		
+		&.theme-dev {
+			
+			@dbg-dline-w:2px;
+			@dbg-sline-w:1px;
+			@dbg-hover-sline-w:5px;
+			
+			outline: @dbg-dline-w dotted red;
+			#fe.bi('chess-bg.png');
+			
+			* {
+				outline:@dbg-dline-w dotted green;
+				
+				&:hover {
+					outline:@dbg-hover-sline-w solid black;
+				}
+				
+				& * {
+					outline:@dbg-dline-w dotted orange;
+					
+					& * {
+						outline:@dbg-dline-w dotted blue;
+						
+						& * {
+							outline:@dbg-sline-w solid red;
+							
+							& * {
+								outline:@dbg-sline-w solid green;
+								
+								& * {
+									outline:@dbg-sline-w solid orange;
+									
+									& * {
+										outline:@dbg-sline-w solid blue;
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+			
+		}
+		&.theme-b0w {
+			#fe.color(#000000);
+			#fe.bg(#ffffff);
+		}
+		&.theme-w0b {
+			#fe.color(#ffffff);
+			#fe.bg(#000000);
+		}
+		
+	}
+	
+	&.theme-sunny, &[data-theme="sunny"] {
+		
+	}
+	&.theme-starry, &[data-theme="starry"] {
+		
+	}
+	
+	&, &[data-state="default"] {
+		
+	}
+	
+}
 .footer-site{
 	//opacity: @opacity;
 }
@@ -1566,6 +1711,61 @@
           transition-delay: 0s, 0.3s;
 }
 
+.page-content-cont {
+	position: fixed;
+	overflow:hidden;
+	right: 0;
+	left: 0;
+	top:-100%;
+	bottom:100%;
+	z-index:10;
+	transition:all @trans-speed ease;
+	#fe.bg(transparent);
+	
+	&[data-state="default"] {
+		top:-100%;
+		bottom:100%;
+	}
+	&[data-state="active"] {
+		top:0;
+		bottom:0;
+	}
+	
+	.close-it {
+		position:absolute;
+		right:2em;
+		top:2em;
+		z-index:16;
+		#fe.w(2em);
+		#fe.h(2em);
+		#fe.bg(#000000);
+	}
+	
+	.content-cont {
+		position:absolute;
+		#fe.h(100%);
+		
+		&.left {
+			left:0;
+			bottom:0;
+			z-index:12;
+			#fe.w(37.5%);
+			#fe.bg(#999999);
+		}
+		&.right {
+			right:0;
+			bottom:0;
+			z-index:14;
+			#fe.w(62.5%);
+			#fe.bg(#ffffff);
+		}
+		&.full {
+		
+		}
+		
+	}
+	
+}
 
 
 

@@ -3,21 +3,25 @@
 	<head>
 		[snp tpl="src/block/site/default/head/.html" ] 
 	</head>
-	<body class="body-index-page">			
-		<div class="index-page">			
+	<body class="fecss body-index-page" data-theme="starry" >
+		
+		<div class="index-page">
 			<div class="index-page-bg"></div>
 			[snp tpl="src/block/site/default/header/.html" class="header-site _index__header-site" ]
 			<div class="container-fluid">
 				<div class="_cb__flex _col index-content">
-					[snp tpl="src/block/site/page/index/_b-info/.html" class="index-info" ]	
+					[snp tpl="src/block/site/page/index/_b-info/.html" class="index-info" ]
 					[snp tpl="src/block/site/page/index/_b-news/.html" class="index-news" ]
 				</div>
 			</div>
 		</div>
+		
+		[snp tpl="src/block/site/default/_page-content-cont/.html" state="default" ]
+		
 		[snp tpl="src/block/site/default/navbar/.html" class="navbar-site navbar-fixed-bottom" ]
-
+		
 		[snp tpl="src/block/site/default/modal/reviews.html" ] 
-
+		
 		[snp tpl="src/block/site/default/head/script.html" ] 
 	</body>
 </html> 

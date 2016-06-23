@@ -8,6 +8,7 @@ $(
 		var res = 'noname-browser';
 		var userAgent = navigator.userAgent.toLowerCase();
 		if (userAgent.indexOf('msie') != -1) res = 'msie';
+		if (userAgent.indexOf('trident') != -1) res = 'msie';
 		if (userAgent.indexOf('konqueror') != -1) res = 'konqueror';
 		if (userAgent.indexOf('firefox') != -1) res = 'firefox';
 		if (userAgent.indexOf('safari') != -1) res = 'safari';
@@ -22,7 +23,7 @@ $(
 
 $(
 	function() {
-		$(document.body).bind('keydown', function(event){
+		$(document.body).on('keydown', function(event){
 			event.stopPropagation();
 			
 			$(document.body).trigger('fecss.keydown', [{
@@ -36,6 +37,13 @@ $(
 		});
 	}
 );
+
+$(
+	function() {
+		//moment.locale(window.navigator.userLanguage || window.navigator.language);
+		////alert(moment().format('LLLL'));
+	}
+)
 
 /*
 end .fecss document-ready

@@ -13,7 +13,13 @@
 			}
 			for(var k in t_arr) {
 				var item = t_arr[k].trim().split(':');
-				$(item[0]).html($(data).find(item[1]).eq(0).html());
+				
+				var d = $('<div/>',{
+					html : data,
+				});
+				
+				$(item[0]).html(d.find(item[1]).eq(0).html());
+				d.empty().remove();
 			}
 			
 			// Если был выполнен клик в меню - добавляем запись в стек истории сеанса
@@ -23,12 +29,17 @@
 				// Добавляем запись в историю, используя pushState
 				window.history.pushState({href : href, target : target}, null, href);
 			}
+			
+			$(document.body).trigger('fecss.url-history.init');
+			$(window).trigger('resize');
 		});
 		
 	});
 	
 	window.addEventListener('popstate', function(event) {
 		//alert(JSON.stringify(event.state));
-		$(document.body).trigger('fecss.url-history.get', [window.location.pathname, event.state.target, false]);
+		if(event.state && event.state.target) {
+			$(document.body).trigger('fecss.url-history.get', [window.location.pathname, event.state.target, false]);
+		}
 	}, false);
 	
