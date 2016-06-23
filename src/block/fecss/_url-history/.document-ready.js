@@ -9,11 +9,11 @@
 		if(target && typeof target != 'undefined' && target != 'undefined') {
 			//href = target;
 		} else {
-			target = 'title:title, body:body';
+			target = '#default-url-history-container:#default-url-history-container';
 		}
 		
 		var addToHistory = true;
 		
-		$(document.body).trigger('fecss.url-history.get', [href, target, addToHistory]);
+		$(document.body).trigger('fecss.url-history.get', [href, target, addToHistory, 'active']);
 	});
 	

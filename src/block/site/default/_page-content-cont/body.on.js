@@ -1,20 +1,30 @@
 	
-	$(document.body).on('fecss.url-history.init', null, {}, function(event){
+	$(document.body).on('fecss.url-history.init', null, {}, function(event, obj){
 		event.preventDefault();
 		
-		$('.page-content-cont').each(function(index){
+		if(obj && obj.state) {
+			$('.page-content-cont').trigger('site.page-content-cont.state', [obj]);
+		}
+		/*
+		.each(function(index){
 			
 			var block = $(this);
-			conaole.log('fecss.url-history.init: .page-content-cont');
+			console.log('fecss.url-history.init: .page-content-cont');
 			
-		});
+			block.trigger('site.page-content-cont.state', [obj]);
+			
+		})
+		;
+		*/
 		
 	});
 	
 	$(document.body).on('site.page-content-cont.state', '.page-content-cont', {}, function(event, obj){
 		event.preventDefault();
 		
-		$('.page-content-cont').attr('data-state', obj.state);
+		//if(obj && obj.state) {
+			$(this).attr('data-state', obj.state || 'default');
+		//}
 		
 	});
 	

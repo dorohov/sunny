@@ -1725,10 +1725,39 @@ body {
 	&[data-state="default"] {
 		top:-100%;
 		bottom:100%;
+		
+		.content-cont {
+			transition:all @trans-speed ease;
+			transition-delay:@trans-speed;
+			&.left {
+				left:-100%;
+				#fe.w(37.5%);
+			}
+			
+			&.right {
+				right:-100%;
+				#fe.w(62.5%);
+			}
+			
+		}
 	}
-	&[data-state="active"] {
+	&[data-state="active"], &[data-state="active-0"] {
 		top:0;
 		bottom:0;
+		
+		.content-cont {
+			
+			&.left {
+				left:0;
+				#fe.w(37.5%);
+			}
+			
+			&.right {
+				#fe.w(62.5%);
+				right:0;
+			}
+			
+		}
 	}
 	
 	.close-it {
@@ -1743,24 +1772,19 @@ body {
 	
 	.content-cont {
 		position:absolute;
+		transition:all @trans-speed ease;
+		bottom:0;
+		z-index:12;
 		#fe.h(100%);
 		
 		&.left {
-			left:0;
-			bottom:0;
-			z-index:12;
 			#fe.w(37.5%);
 			#fe.bg(#999999);
 		}
 		&.right {
-			right:0;
-			bottom:0;
 			z-index:14;
 			#fe.w(62.5%);
 			#fe.bg(#ffffff);
-		}
-		&.full {
-		
 		}
 		
 	}

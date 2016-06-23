@@ -1,5 +1,5 @@
 	
-	$(document.body).on('fecss.url-history.get', null, {}, function(event, href, target, addToHistory){
+	$(document.body).on('fecss.url-history.get', null, {}, function(event, href, target, addToHistory, state){
 		event.preventDefault();
 		
 		$.get(href, {}, function(data) {
@@ -11,6 +11,7 @@
 			} else {
 				t_arr = ['div:div'];
 			}
+			
 			for(var k in t_arr) {
 				var item = t_arr[k].trim().split(':');
 				
@@ -19,6 +20,8 @@
 				});
 				
 				$(item[0]).html(d.find(item[1]).eq(0).html());
+				//$(item[0]).attr('data-state', d.find(item[1]).eq(0).attr('data-state') || state);
+				state = d.find(item[1]).eq(0).attr('data-state') || state;
 				d.empty().remove();
 			}
 			
@@ -30,7 +33,9 @@
 				window.history.pushState({href : href, target : target}, null, href);
 			}
 			
-			$(document.body).trigger('fecss.url-history.init');
+			$(document.body).trigger('fecss.url-history.init', [{
+				state : state,
+			}]);
 			$(window).trigger('resize');
 		});
 		
