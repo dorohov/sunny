@@ -3,6 +3,7 @@
 	
 	.scroll-element {
 		overflow:scroll;
+		//width:110%;
 		
 		.scroll-overflow {
 			overflow:scroll;
@@ -39,10 +40,14 @@
 				
 				&.ball {
 					& > .scroll-ball {
-						#fe.w(1em);
-						#fe.h(1em);
 						left:50%;
 						top:-0.2em;
+						#fe.w(24px);
+						#fe.h(24px);
+						#fe.bpos();
+						#fe.brep();
+						#fe.bsize(contain);
+						#site.bi('.scroll-container/scroll-ball-bg.png');
 					}
 				}
 			}

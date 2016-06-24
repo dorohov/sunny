@@ -8,5 +8,5 @@
 		
 	});
 	
-	$('.page-content-cont').trigger('site.page-content-cont.state', [{state:'default'}]);
+	$('.page-content-cont').trigger('site.page-content-cont.state', [{state:'active'}]);
 	

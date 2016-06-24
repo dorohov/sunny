@@ -7,6 +7,7 @@
 	bottom:100%;
 	z-index:10;
 	transition:all @trans-speed ease;
+	font-size:10px;
 	#fe.bg(transparent);
 	
 	&[data-state="default"] {
@@ -93,8 +94,9 @@
 		z-index:16;
 		transform-origin:center center;
 		transition:all @trans-speed / 2 ease;
-		#fe.w(3.6em);
-		#fe.h(3.6em);
+		cursor:pointer;
+		#fe.w(36px);
+		#fe.h(36px);
 		//#fe.bpos();
 		//#fe.brep();
 		//#fe.bsize(cover);
@@ -104,7 +106,7 @@
 			content:'';
 			position:absolute;
 			left:-50%;
-			top:47.75%;
+			top:44%;
 			#fe.w(200%);
 			#fe.h(3px);
 			#fe.bg(rgba(188, 188, 188, 1));
