@@ -1,0 +1,18 @@
+.blue-box {
+	position:relative;
+	display:block;
+	#fe.bg(#364ca8);
+	#fe.color(#ffffff);
+	
+	&:after {
+		content:'';
+		position:absolute;
+		left:0;
+		top:100%;
+		border-top:30px solid #243889;
+		border-left:30px solid transparent;
+		//#fe.bg(#243889);
+		#fe.w(30px);
+		#fe.h(30px);
+	}
+}

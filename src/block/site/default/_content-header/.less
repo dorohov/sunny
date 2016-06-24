@@ -1,0 +1,31 @@
+.content-header {
+	span {
+		font-weight: 400;
+		display:block;
+		#fe.ff(@bebas-bold);
+		#fe.color(#6ea93a);
+		#fe.size(4.8em);
+		#fe.lh(1em);
+		#fe.uppercase();
+	}
+	
+	&.on-page-404 {
+		span {
+			#fe.size(4.4em);
+			#fe.lh(1.2em);
+		}
+		a {
+			font-weight: 400;
+			#fe.color(#5b87b8);
+			#fe.size(1.8em);
+			#fe.ff(@bebas);
+			#fe.uppercase();
+			#fe.underline();
+			#fe.lh(3.5em);
+			
+			&:hover {
+				#fe.underline(none);
+			}
+		}
+	}
+}
