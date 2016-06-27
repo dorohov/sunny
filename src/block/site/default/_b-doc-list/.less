@@ -1,0 +1,30 @@
+.b-doc-list {
+	
+	.doc-item {
+		padding-left:45px;
+		#fe.bpos(left top);
+		#fe.brep();
+		
+		a {
+			#fe.size(16px);
+			#fe.color(#364ca8);
+			#fe.ff(@proxima);
+			#fe.underline();
+			#fe.lh(2em);
+			
+			&:hover {
+				#fe.underline(none);
+			}
+		}
+		
+		&[data-ext] {
+			
+		}
+		
+		&[data-ext="pdf"] {
+			#site.bi('default/.doc-item/pdf.png');
+		}
+		
+	}
+	
+}

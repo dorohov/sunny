@@ -1,0 +1,64 @@
+.b-photogallery {
+	
+	.street-filters {
+		.bttn {
+			display:inline-block;
+			border:2px solid #364ca8;
+			padding:15px;
+			transition:all @trans-speed ease;
+			border-radius:0px;
+			margin-right:25px;
+			#fe.color(#000000);
+			#fe.size(14px);
+			#fe.bold(400);
+			#fe.bg(transparent);
+			#fe.ff(@proxima);
+			#fe.uppercase();
+			#fe.underline(none);
+			
+			&:focus {
+				#fe.bg(#364ca8);
+				#fe.color(#ffffff);
+			}
+		}
+	}
+	
+	.date-filters {
+		.bttn {
+			display:inline-block;
+			transition:all @trans-speed ease;
+			margin-right:25px;
+			#fe.color(#aeaeae);
+			#fe.size(18px);
+			#fe.bold(400);
+			#fe.ff(@bebas);
+			#fe.uppercase();
+			#fe.underline();
+			
+			&:focus {
+				#fe.color(#364ca8);
+				#fe.underline(none);
+			}
+			
+			&.archive {
+				margin-left:10px;
+				padding-left:25px;
+				#fe.brep();
+				#fe.bpos(left center);
+				#site.bi('default/.date-filters/calendar.png');
+			}
+		}
+	}
+	
+	.b-photo-list {
+		
+		.photo-item {
+			display:block;
+			#fe.bpos();
+			#fe.bsize(cover);
+			#fe.brep();
+			#fe.h(305px);
+		}
+		
+	}
+}
