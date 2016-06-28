@@ -16,6 +16,8 @@
 
 <script src="/js/modernizr-custom.js" ></script>
 <script src="/js/device.min.js" ></script>
+
+<script src="//api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
  
 	</head>
 	<body class="fecss body-index-page" data-theme="starry" >
@@ -126,9 +128,11 @@
 	</a>
 	
 	<div class="content-cont left" >
-		левый
+		
+		<iframe class="iframe-yandex-map" src="iframe-yandex-map.html" ></iframe> 
+		
 	</div>
-	<div class="content-cont right" >
+	<div class="content-cont right right-bg " data-right-bg="default" >
 		
 		<div class="content-scroll" >
 			
@@ -280,6 +284,7 @@
 <!--<script src="/js/azbn.js" ></script>-->
 <script src="/js/wow.min.js" ></script>
 
-<script src="/js/document-ready.js" ></script> 
+<script src="/js/document-ready.js" ></script>
+<script src="/js/document-ready-yandex-map.js" ></script> 
 	</body>
 </html> 
