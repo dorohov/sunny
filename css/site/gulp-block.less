@@ -2081,9 +2081,13 @@ body {
 		
 		.content-cont {
 			
+			&.top {
+				display:block;
+			}
+			
 			&.left {
+				top:150px;
 				#fe.w(100%);
-				#fe.h(100%);
 				
 				iframe.iframe-yandex-map, iframe.iframe-layout-map {
 					display:block;
@@ -2184,6 +2188,14 @@ body {
 		z-index:12;
 		#fe.h(100%);
 		
+		&.top {
+			display:none;
+			left:0;
+			top:0;
+			#fe.w(100%);
+			#fe.h(150px);
+			#fe.bg(#ffffff);
+		}
 		&.left {
 			#fe.w(50%);
 			#fe.bpos();
