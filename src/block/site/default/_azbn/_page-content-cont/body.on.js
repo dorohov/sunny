@@ -28,3 +28,9 @@
 		
 	});
 	
+	$(document.body).on('site.page-content-cont.reheight', '.page-content-cont', {}, function(event, obj){
+		event.preventDefault();
+		
+		console.log('.page-content-cont trigger: site.page-content-cont.reheight ' + obj.height);
+	});
+	

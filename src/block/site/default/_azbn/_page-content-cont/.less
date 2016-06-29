@@ -88,7 +88,7 @@
 			}
 			
 			&.left {
-				top:150px;
+				top:8em;
 				#fe.w(100%);
 				
 				iframe.iframe-yandex-map, iframe.iframe-layout-map {
@@ -164,9 +164,10 @@
 	.office-cont {
 		position:absolute;
 		display:block;
-		right:5em;
+		right:8em;
 		top:0em;
 		padding:15px 25px;
+		transition:all @trans-speed ease;
 		#fe.z(16);
 		#fe.bold(400);
 		#fe.color(#ffffff);
@@ -181,10 +182,15 @@
 			#fe.size(18px);
 			#fe.lh(24px);
 		}
+		
+		&:hover {
+			#fe.bg(#42D0FF);
+		}
 	}
 	
 	.content-cont {
 		position:absolute;
+		overflow:hidden;
 		transition:all @trans-speed ease;
 		bottom:0;
 		z-index:12;

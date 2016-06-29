@@ -23,7 +23,8 @@ $(document.body).on("fecss.jssearch",null,{},function(s,e,n){console.log("body t
 $(document.body).on("fecss.modal.show.after",null,{},function(e,o,t){e.preventDefault(),console.log("body trigger:fecss.modal.show.after")}),$(document.body).on("fecss.modal.hide.after",null,{},function(e,o,t){e.preventDefault(),console.log("body trigger:fecss.modal.hide.after")}),$(document.body).on("fecss.active.set",".fecss-modal .white-container",{},function(e,o,t){e.preventDefault(),console.log(".white-container trigger:fecss.active.set")}),$(document.body).on("fecss.active.unset",".fecss-modal .white-container",{},function(e,o,t){e.preventDefault(),console.log(".white-container trigger:fecss.active.unset")});
 
 $(document.body).on("fecss.url-history.get",null,{},function(t,e,i,n,r){t.preventDefault(),$.get(e,{},function(t){var o=[];o=""!=i&&"undefined"!=typeof i&&"undefined"!=i?i.split(","):["div:div"];for(var d in o){var a=o[d].trim().split(":"),s=$("<div/>",{html:t});$(a[0]).html(s.find(a[1]).eq(0).html()),r=s.find(a[1]).eq(0).attr("data-state")||r,s.empty().remove()}1==n&&window.history.pushState({href:e,target:i},null,e),$(document.body).trigger("fecss.url-history.init",[{state:r}]),$(window).trigger("resize")})}),window.addEventListener("popstate",function(t){t.state&&t.state.target&&$(document.body).trigger("fecss.url-history.get",[window.location.pathname,t.state.target,!1])},!1);
-$(document.body).on("fecss.url-history.init",null,{},function(t,e){t.preventDefault(),e&&e.state&&$(".page-content-cont").trigger("site.page-content-cont.state",[e])}),$(document.body).on("site.page-content-cont.state",".page-content-cont",{},function(t,e){t.preventDefault(),$(this).attr("data-state",e.state||"default")});
+$(document.body).on("site.page-content-cont.reheight",".page-content-cont",{},function(t,n){t.preventDefault();var e=$(document.body).find(".page-content-cont").eq(0),o=e.find(".content-scroll"),c=n.height-170-e.find(".cont-header").outerHeight(!0);o.css({height:c+"px"}),o.find(".scroll-container").trigger("init")});
+$(document.body).on("fecss.url-history.init",null,{},function(t,e){t.preventDefault(),e&&e.state&&$(".page-content-cont").trigger("site.page-content-cont.state",[e])}),$(document.body).on("site.page-content-cont.state",".page-content-cont",{},function(t,e){t.preventDefault(),$(this).attr("data-state",e.state||"default")}),$(document.body).on("site.page-content-cont.reheight",".page-content-cont",{},function(t,e){t.preventDefault(),console.log(".page-content-cont trigger: site.page-content-cont.reheight "+e.height)});
 	
 	
 	/*
@@ -63,10 +64,10 @@ $(window).on("load",function(e){$(".page-loader").removeClass("active")}),$(docu
 $(".scroll-container").each(function(t){var r,o=$(this),a=$(o.attr("data-target")+" .scroll-element").eq(0),i=a.find(".scroll-overflow").eq(0),e=o.find(".scroll-line"),l=e.find(".scroll");r=$("<div/>",{"class":"scroll-ball"}),r.appendTo(l.empty());var n=0;o.on("init",function(t){t.preventDefault(),console.log(".scroll-container init"),o.hasClass("horizontal")?(n=0,l.width(e.width()*(a.outerWidth(!0)/i.outerWidth(!0))),o.attr("data-ratio-h",i.outerWidth(!0)/e.outerWidth(!0)),l.draggable({axis:"x",containment:"parent",scroll:!1,drag:function(t,r){a.scrollLeft(r.position.left*o.attr("data-ratio-h"))}}),a.trigger("scroll")):o.hasClass("vertical")&&(n=1,l.height(e.height()*(a.outerHeight(!0)/i.outerHeight(!0))),o.attr("data-ratio-v",i.outerHeight(!0)/e.outerHeight(!0)),l.draggable({axis:"y",containment:"parent",scroll:!1,drag:function(t,r){a.scrollTop(r.position.top*o.attr("data-ratio-v"))}}),a.trigger("scroll"))}).trigger("init"),a.on("scroll",function(t){var i=0,s=0;0==n?(i=a.scrollLeft()/o.attr("data-ratio-h"),s=100*i/(e.outerWidth(!0)-l.outerWidth(!0)),l.css({left:i}),r.css({left:s+"%"})):1==n&&(i=a.scrollTop()/o.attr("data-ratio-v"),s=100*i/(e.outerHeight(!0)-l.outerHeight(!0)),l.css({top:i}),r.css({top:s+"%"}))})});
 $(document.body).on("click.fecss.scrollto",".scrollto",{},function(t){t.preventDefault(),console.log("body trigger:click.fecss.scrollto");var o=$(this),l=$(o.attr("href")).eq(0),e=parseInt(o.attr("data-scrollto-diff"))||0,r=parseInt(o.attr("data-scrollto-speed"))||777;$("html, body").animate({scrollTop:l.offset().top+e},r)});
 
-$(document.body).on("click.fecss.url-history",".url-history",{},function(t){t.preventDefault();var e=$(this),r=e.attr("href"),i=e.attr("data-target");i&&"undefined"!=typeof i&&"undefined"!=i||(i="#default-url-history-container:#default-url-history-container");var n=!0;$(document.body).trigger("fecss.url-history.get",[r,i,n,"active"])});
+
 $("img").addClass("img-responsive");var url=window.location.pathname;$('.navbar-nav a[href="'+url+'"]').parent().addClass("active"),$("._in__carousel .item").eq(0).addClass("active"),device.mobile()?$(".navbar-site").addClass("navbar-mobile"):(new WOW).init(),$(".navbar-mobile").autoHidingNavbar();
-$(document.body).on("scroll.site.content-scroll",".content-scroll",{},function(o){o.preventDefault();$(this);console.log("123")});
-$(document.body).on("click.site.page-content-cont.close-it",".page-content-cont .close-it",{},function(t){t.preventDefault();var e=$(this);e.closest(".page-content-cont").trigger("site.page-content-cont.state",[{state:"default"}])}),$(".page-content-cont").trigger("site.page-content-cont.state",[{state:"active"}]);
+
+$(document.body).on("click.site.page-content-cont.close-it",".page-content-cont .close-it",{},function(t){t.preventDefault();var e=$(this);e.closest(".page-content-cont").trigger("site.page-content-cont.state",[{state:"default"}])});
 	
 	
 	/*
@@ -78,6 +79,7 @@ $(function(){var s={xs:{min:0,max:768},sm:{min:767,max:992},md:{min:991,max:1200
 $(function(){$(".scroll-container").trigger("init"),console.log("window-resize .scroll-container init")});
 var h_window=$(window).height(),w_window=$(window).width(),h_navbar=$(".navbar-site").outerHeight(!0),h_body=h_window-h_navbar;w_window>767?$(".index-page").css("min-height",h_body):$(".index-page").removeAttr("style");
 
+$(function(){var e=$(document.body).find(".page-content-cont").eq(0),t=$(document.body).find(".navbar").eq(0);if(t.length){var n=$(window).outerHeight(!0)-t.outerHeight(!0);e.css({height:n}),e.trigger("site.page-content-cont.reheight",[{height:n}])}});
 	}).trigger('resize');
 	
 	

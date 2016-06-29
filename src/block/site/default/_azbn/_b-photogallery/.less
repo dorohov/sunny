@@ -1,6 +1,8 @@
 .b-photogallery {
 	
 	.street-filters {
+		margin:20px 0;
+		
 		.bttn {
 			display:inline-block;
 			border:2px solid #364ca8;
@@ -20,10 +22,17 @@
 				#fe.bg(#364ca8);
 				#fe.color(#ffffff);
 			}
+			
+			&:hover {
+				#fe.bg(#364ca8);
+				#fe.color(#ffffff);
+			}
 		}
 	}
 	
 	.date-filters {
+		margin:20px 0;
+		
 		.bttn {
 			display:inline-block;
 			transition:all @trans-speed ease;
@@ -40,6 +49,10 @@
 				#fe.underline(none);
 			}
 			
+			&:hover {
+				#fe.color(#364ca8);
+			}
+			
 			&.archive {
 				margin-left:10px;
 				padding-left:25px;
@@ -54,6 +67,7 @@
 		
 		.photo-item {
 			display:block;
+			margin:0 25px 15px 0px;
 			#fe.bpos();
 			#fe.bsize(cover);
 			#fe.brep();

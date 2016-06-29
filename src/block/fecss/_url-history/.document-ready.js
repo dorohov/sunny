@@ -1,4 +1,4 @@
-	
+	/*
 	$(document.body).on('click.fecss.url-history', '.url-history', {}, function(event){
 		event.preventDefault();
 		
@@ -16,4 +16,4 @@
 		
 		$(document.body).trigger('fecss.url-history.get', [href, target, addToHistory, 'active']);
 	});
-	
+	*/
