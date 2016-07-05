@@ -1,0 +1,129 @@
+.hypothec-page{
+	//opacity: @opacity;
+	.content-header{
+		padding: 90px 80px 30px 190px;
+	}
+	&.page-content-cont{
+		.bear{
+			background-size: 107px;
+			right: 40em;
+			top: .6em;
+		}
+	}
+	.content-scroll{
+		margin-top: 25px;
+	}
+}
+.cont-bank-filters{
+	padding-left: 190px;
+	padding-right: 190px;
+}
+.bank-filters{
+	display: flex;
+	justify-content: space-between;
+	margin: 0 -10px;
+	.bttn{
+		padding: 0 10px;
+		span{
+			display: block;
+			border: 1px solid #d6d6d6;
+			transition: @transition-site;
+			img{
+				transition: @transition-site;
+				filter: grayscale(100%);
+			}
+		}
+		&:hover{
+			span{
+				border: 1px solid fadeout(#d6d6d6, 50%);	
+				img{
+					filter: grayscale(30%);
+				}		
+			}
+		}
+		&.active{
+			cursor: default;
+			span{
+				border: 1px solid fadeout(#d6d6d6, 100%);	
+				img{
+					filter: grayscale(0%);
+				}		
+			}
+		}
+	}
+}
+._hp__content-scroll{
+	margin-right: 40px;  
+	padding-right: 145px;
+	padding-bottom: 40px;
+} 
+._hp__blue-box{
+	padding: 25px 40px 35px 190px;
+	._heading{
+		font-family: @proxima-bold;
+	    font-size: 32px;
+   		line-height: 42px;
+   		margin-bottom: 30px;
+	}
+	._flex-block{
+	    font-size: 30px;
+   		line-height: 36px;
+		font-family: @proxima-light;
+		align-items: center;
+		._title{
+			font-family: @bebas;
+			text-transform: uppercase;    
+			font-size: 18px;
+    		line-height: 26px;
+    		letter-spacing: 1.2px;
+		}
+		._cb__col{
+			&:nth-child(1){width: 27%}
+			&:nth-child(2){width: 23%}
+			&:nth-child(3){width: 22%}
+			&:nth-child(4){width: 28%}
+		}
+		.btn-site{
+			line-height: 50px;
+			font-family: @proxima-bold;    
+			font-size: 13px;
+		}
+	}
+}
+._hp__content{
+	padding-left: 190px;
+	margin-top: 35px;
+	font-family: @proxima;
+	font-size: 16px;
+	line-height: 21px;
+	b, strong{font-family: @proxima-semibold;}
+	h1, h2, h3, h4, h5, h6{
+		color: #262262;
+		text-transform: uppercase;
+		font-family: @proxima-bold;
+	}
+	h4{
+		font-size: 16px;
+		line-height: 24px;
+		letter-spacing: .3px;
+		margin-bottom: 25px;
+	}
+	ul{
+		list-style: none;
+		margin-bottom: 15px;
+		li{
+			margin-bottom: 15px;
+			&:before{
+				content: '';
+				width: 7px;
+				height: 7px;
+				display: inline-block;
+				background: @dark-green;
+				border-radius: 50%;
+				margin-right: 15px;
+				float: left;    
+				margin-top: 7px;
+			}
+		}
+	}
+}

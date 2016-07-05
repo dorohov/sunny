@@ -1,31 +1,55 @@
 .b-doc-list {
-	margin:30px 0;
-	
+	margin: 0 0 30px 0;
+	max-width: 640px;
+
 	.doc-item {
-		padding-left:45px;
-		margin-bottom:20px;
+		//padding-left:45px;
+		margin-bottom:35px;
 		#fe.bpos(left top);
 		#fe.brep();
-		
+		display: flex;
+    	align-items: center;
 		a {
 			#fe.size(16px);
 			#fe.color(#364ca8);
 			#fe.ff(@proxima);
-			#fe.underline();
-			#fe.lh(2em);
-			
+			//#fe.underline();
+			//#fe.lh(1em);    
+			line-height: 22px;
+			span{
+				border-bottom: 1px solid #cdd2e9;
+				transition:all @trans-speed ease;
+			}
 			&:hover {
 				#fe.underline(none);
+				span{
+					border-color: transparent;
+				}
 			}
 		}
-		
-		&[data-ext] {
-			
+		&:before{
+			font-family: @icon;
+			color: #f64117;
+			font-size: 33px;
+			line-height: 33px;
+			float: left;
+			margin-right: 10px;
+		}
+		&[data-ext="pdf"]{
+			&:before{content: @icon-pdf;}
+		}
+		&[data-ext="doc"],
+		&[data-ext="docx"]{
+			&:before{content: @icon-doc;}
+		}
+		&[data-ext="xls"],
+		&[data-ext="xlsx"]{
+			&:before{content: @icon-xls;}
 		}
 		
-		&[data-ext="pdf"] {
+		/*&[data-ext="pdf"] {
 			#site.bi('default/.doc-item/pdf.png');
-		}
+		}*/
 		
 	}
 	

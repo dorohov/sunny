@@ -1,12 +1,12 @@
 .b-photogallery {
 	
 	.street-filters {
-		margin:20px 0;
+		margin:7px 0 24px;
 		
 		.bttn {
 			display:inline-block;
 			border:2px solid #364ca8;
-			padding:15px;
+			padding:5px 15px;
 			transition:all @trans-speed ease;
 			border-radius:0px;
 			margin-right:25px;
@@ -17,6 +17,7 @@
 			#fe.ff(@proxima);
 			#fe.uppercase();
 			#fe.underline(none);
+			letter-spacing: .4px;
 			
 			&:focus {
 				#fe.bg(#364ca8);
@@ -27,6 +28,11 @@
 				#fe.bg(#364ca8);
 				#fe.color(#ffffff);
 			}
+			&.active{
+				#fe.bg(#364ca8);
+				#fe.color(#ffffff);
+				cursor: default;
+			}
 		}
 	}
 	
@@ -36,13 +42,14 @@
 		.bttn {
 			display:inline-block;
 			transition:all @trans-speed ease;
-			margin-right:25px;
+			margin-right:20px;
 			#fe.color(#aeaeae);
 			#fe.size(18px);
 			#fe.bold(400);
 			#fe.ff(@bebas);
 			#fe.uppercase();
-			#fe.underline();
+			#fe.underline();    
+			letter-spacing: 1.3px;
 			
 			&:focus {
 				#fe.color(#364ca8);
@@ -54,7 +61,7 @@
 			}
 			
 			&.archive {
-				margin-left:10px;
+				margin-left:30px;
 				padding-left:25px;
 				#fe.brep();
 				#fe.bpos(left center);
@@ -67,7 +74,7 @@
 		
 		.photo-item {
 			display:block;
-			margin:0 25px 15px 0px;
+			margin:0 25px 30px 0px;
 			#fe.bpos();
 			#fe.bsize(cover);
 			#fe.brep();

@@ -1,0 +1,132 @@
+.b-contacts{
+	padding: 30px 0px 75px;
+	.b-contacts-flex{
+		display: flex;
+		margin: 0 -15px;
+	} 
+	.heading{
+		color: @dark-blue; 
+		text-transform: uppercase;
+		font-family: @proxima-bold;
+		font-size: 15px;
+		margin-bottom: 5px;
+	}
+	.note{
+		font-size: 16px;
+		line-height: 20px;
+	}
+	.b-contacts-item{
+		display: flex;
+		align-items: center;
+		padding: 5px 15px 0;
+		color: #212121;
+		a{color: #212121;}
+		&:before{
+			font-family: @icon;
+			float: left;
+			font-size: 60px;
+			line-height: 60px;
+			color: #6ea93a;
+			margin-right: 10px;
+		}
+		&.map{
+			width: 44%;
+			&:before{
+				content: @icon-location2;
+				margin-left: -10px;
+			}
+		}
+		&.smart{
+			width: 40%;
+			&:before{
+				content: @icon-smart;
+			}
+		}
+	}
+	.b-contacts-item-soc{
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		padding: 0 15px;
+		width: 16%;
+		.icon{
+			text-decoration: none;
+			&:before{
+				font-family: @icon;
+				display: block;
+				font-size: 28px;
+				line-height: 28px;
+				transition: all 0.25s linear;
+			}
+			&.icon-vk:before{
+				content: @icon-vk;
+				color: #4c75a3;
+			}
+			&.icon-fb:before{
+				content: @icon-fb;
+				color: #3b559f;
+			}
+			&:hover{
+				&:before{
+					transform: scale(1.1);
+				}
+			}
+		}
+	}
+}
+.cont-form{
+	.b-form{
+		max-width: 545px; 
+	}
+}
+.b-form{
+	._heading{
+		font-family: @proxima-bold;
+		text-transform: uppercase;
+		color: @dark-blue;
+		font-size: 15px;    
+		margin-bottom: 15px;
+	}
+	.b-form__col2{
+		._cb__col{width: 50%;}	
+	}
+	.form-control{
+		border-radius: 0;
+		height: 43px;
+		border: 1px solid #d4d4d4;
+		transition: @transition-site;
+		margin-bottom: 15px;
+		&:-moz-placeholder{
+			font-size: 15px;
+			color: #878787;
+			transition: @transition-site;
+		}
+		&::-webkit-input-placeholder {
+			font-size: 15px;
+			color: #878787;		
+			transition: @transition-site;
+		}
+		&:focus{
+			border: 1px solid @dark-green;
+			box-shadow: none;
+			&:-moz-placeholder{
+				color: @dark-green;
+			}
+			&::-webkit-input-placeholder {
+				color: @dark-green;
+			}
+		}
+
+		
+	}
+	textarea.form-control{
+		padding: 15px 12px;
+		height: 110px; 
+	}
+	.btn-site{
+		font-family: @proxima-bold;
+		font-size: 16px;
+		padding: 0px 32px;
+		margin-top: 5px;
+	}
+}

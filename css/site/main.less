@@ -154,6 +154,17 @@ a{
     	text-decoration: none;
     }
 }
+.btn-green-dark{
+	background: @dark-green;
+	color: @white;   
+    &:focus{
+		background: @dark-green;
+    }
+    &:hover{
+    	background: @green;
+    	text-decoration: none;
+    }
+}
 .btn-dark-blue{
 	background: @dark-blue;
 	color:  @white;   
@@ -197,4 +208,20 @@ a{
 		color:  @white; 
 		background: @green;
     }
+}
+.btn-white-line{
+	color:  @white;
+	background: fadeout(@white, 100%);
+	border: 1px solid @white;
+    &:focus{
+		background: @white;
+    }
+    &:hover{
+		color: @dark-blue;
+		background: @white;
+    }
+}
+.content-inner{
+	padding-left: 80px;
+	padding-right: 80px;
 }
