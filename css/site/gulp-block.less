@@ -1425,12 +1425,14 @@ body {
 	justify-content: center;
 	> li{
 		margin: 0 35px;
+		@media @media-size-xl{margin: 0 25px;}
 		> a{
 			text-transform: uppercase;
 			font-size: 14px;
 			color: lighten(@black, 20%);
 			//padding: 30px 15px;
 			padding: 20px 15px;
+			@media @media-size-xl{padding: 20px 10px;}
 			letter-spacing: 0.7px;
 			transition: @transition-site;
 			span{
@@ -1709,6 +1711,26 @@ body {
 		max-width: 995px;
 	}
 }
+._ap__blue-box{
+	padding-top: 20px;
+	padding-right: 65px;
+	padding-bottom: 20px;
+
+	margin-right: 60px;
+	@media @media-size-xl{
+		margin-right: 100px;
+	}
+}
+._ap__content-margin{
+	padding-bottom: 40px;
+	padding-right: 110px;
+
+	margin-right: 60px;
+	@media @media-size-xl{
+		padding-right: 65px;
+		margin-right: 100px;
+	}
+}
 .advantage-page{
 	//opacity: @opacity;
 	&.page-content-cont{
@@ -1716,6 +1738,10 @@ body {
 			background-size: 107px;
 			right: 40em;
 			top: .6em;
+			@media @media-size-xl{
+				right: 33em;
+				background-size: 85px;
+			}
 		}
 	}
 }
@@ -1746,7 +1772,21 @@ body {
 			background-size: 107px;
 			right: 18em;
 			top: 49.3em;
+			@media @media-size-xl{
+				background-size: 85px;
+				right: 4em;
+			}
 		}
+	}
+}
+._dp__blue-box{
+	padding-top: 15px;
+	padding-right: 30px;
+	padding-bottom: 15px; 
+
+	margin-right: 40px;
+	@media @media-size-xl{
+		margin-right: 80px;
 	}
 }
 .gallery-page{
@@ -1756,13 +1796,28 @@ body {
 			background-size: 107px;
 			right: 40em;
 			top: .6em;
+			@media @media-size-xl{
+				right: 33em;
+				background-size: 85px;
+			}
 		}
+	}
+}
+._galp__content-margin{
+	padding-right: 80px;
+	padding-bottom: 40px;
+
+	margin-right: 40px; 
+	@media @media-size-xl{
+		padding-right: 40px;
 	}
 }
 .hypothec-page{
 	//opacity: @opacity;
 	.content-header{
-		padding: 90px 80px 30px 190px;
+		padding-top: 90px;
+		padding-right: 80px;
+		padding-bottom: 30px;
 	}
 	&.page-content-cont{
 		.bear{
@@ -1776,8 +1831,10 @@ body {
 	}
 }
 .cont-bank-filters{
-	padding-left: 190px;
 	padding-right: 190px;
+	@media @media-size-xl{
+		padding-right: 100px;
+	}
 }
 .bank-filters{
 	display: flex;
@@ -1817,9 +1874,17 @@ body {
 	margin-right: 40px;  
 	padding-right: 145px;
 	padding-bottom: 40px;
+	@media @media-size-xl{
+		padding-right: 40px;
+	}
 } 
 ._hp__blue-box{
-	padding: 25px 40px 35px 190px;
+	padding-top: 25px;
+	padding-right: 40px;
+	padding-bottom: 35px;
+	@media @media-size-xl{
+		padding-right: 40px;
+	}
 	._heading{
 		font-family: @proxima-bold;
 	    font-size: 32px;
@@ -1831,32 +1896,49 @@ body {
    		line-height: 36px;
 		font-family: @proxima-light;
 		align-items: center;
+		@media @media-size-xl{
+		    font-size: 22px;
+	   		line-height: 28px;
+		}
 		._title{
 			font-family: @bebas;
 			text-transform: uppercase;    
 			font-size: 18px;
     		line-height: 26px;
     		letter-spacing: 1.2px;
+			@media @media-size-xl{
+			    font-size: 15px;
+		   		line-height: 23px;
+			}
 		}
 		._cb__col{
 			&:nth-child(1){width: 27%}
 			&:nth-child(2){width: 23%}
 			&:nth-child(3){width: 22%}
 			&:nth-child(4){width: 28%}
+			@media @media-size-xl{
+				&:nth-child(3){width: 20%}
+				&:nth-child(4){width: 30%}
+
+			}
 		}
 		.btn-site{
 			line-height: 50px;
 			font-family: @proxima-bold;    
 			font-size: 13px;
+			@media @media-size-xl{
+				font-size: 11px;
+				padding: 0 20px;
+			}
 		}
 	}
 }
 ._hp__content{
-	padding-left: 190px;
 	margin-top: 35px;
 	font-family: @proxima;
 	font-size: 16px;
 	line-height: 21px;
+	padding-bottom: 30px; 
 	b, strong{font-family: @proxima-semibold;}
 	h1, h2, h3, h4, h5, h6{
 		color: #262262;
@@ -1888,15 +1970,35 @@ body {
 		}
 	}
 }
-
+.layouts-page{
+	//opacity: @opacity;
+	.content-header {
+	    padding: 42px 200px 22px;
+	    h1{
+	    	margin-bottom: 7px;
+	    }
+	}
+	.layouts-block{
+		background: url('@{url-path-img}/layouts/bg-layouts.jpg') no-repeat center;
+		display: block;
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: 100%;
+		height: 100%;
+    	background-size: cover;
+	}
+	.content-cont.left {
+	    top: 147px!important;
+	    bottom: 0px!important;
+	    height: auto!important;
+	}
+	.logotip{top: 1em;}
+}
 .location-page{
 	//opacity: @opacity;
-	.content-cont.top{
-		box-shadow: 0px 5px 10px fadeout(@black, 80%);
-		.content-header span {
-		    text-align: center;
-		    padding: 42px 200px;
-		}
+	.content-header {
+	    padding: 42px 200px;
 	}
 }
 .news-page{
@@ -1906,6 +2008,10 @@ body {
 			background-size: 107px;
 			right: 40em;
 			top: .6em;
+			@media @media-size-xl{
+			    right: 29em;
+    			background-size: 55px;
+			}
 		}
 	}
 }
@@ -1962,6 +2068,7 @@ body {
 	.note{
 		font-size: 16px;
 		line-height: 20px;
+		@media @media-size-xl{font-size: 15px;}
 	}
 	.b-contacts-item{
 		display: flex;
@@ -1994,7 +2101,8 @@ body {
 	.b-contacts-item-soc{
 		display: flex;
 		flex-direction: column;
-		justify-content: space-between;
+		justify-content: space-between;    
+		align-items: flex-start;
 		padding: 0 15px;
 		width: 16%;
 		.icon{
@@ -2081,7 +2189,17 @@ body {
 .b-doc-list {
 	margin: 0 0 30px 0;
 	max-width: 640px;
-
+	.doc-flex{
+		display: flex;
+		flex-wrap: wrap;
+		margin-left: -15px;
+		margin-right: -15px;
+	}
+	.doc-col{
+		width: 50%;
+		padding-left: 15px;
+		padding-right: 15px;
+	}
 	.doc-item {
 		//padding-left:45px;
 		margin-bottom:35px;
@@ -2134,10 +2252,21 @@ body {
 	}
 	
 }
+.news-flex{
+	display: flex;
+	flex-wrap: wrap;
+	margin-left: -15px;
+	margin-right: -15px;
+}
+.news-col{
+	width: 50%;
+	padding-left: 15px;
+	padding-right: 15px;
+}
 .b-news-list {
 	
 	.news-item {
-		padding:0 12px 65px;
+		padding:0 0 65px;
 		
 		.created_at {
 			margin-bottom:8px;
@@ -2371,7 +2500,7 @@ body {
 	}
 }
 .content-header {
-	span {
+	h1 {
 		font-weight: 400;
 		display:block;
 		#fe.ff(@bebas-bold);
@@ -2380,6 +2509,13 @@ body {
 		#fe.lh(1em);
 		#fe.uppercase();
 		letter-spacing: 3px;
+	}
+	span{
+		font-size: 16px;
+		color: lighten(@black, 60%);
+		font-family: @proxima-semibold;
+		text-transform: uppercase;
+		line-height: 24px;
 	}
 	
 	&.on-page-404 {
@@ -2611,6 +2747,7 @@ body {
 				left:0;
 				#fe.w(57%);
 				
+				@media @media-size-xl{#fe.w(45%);}
 				iframe.iframe-yandex-map, iframe.iframe-layout-map {
 					display:block;
 					position:absolute;
@@ -2625,6 +2762,7 @@ body {
 			&.right {
 				right:0;
 				#fe.w(43%);
+				@media @media-size-xl{#fe.w(55%);}
 			}
 			
 		}
@@ -2639,6 +2777,11 @@ body {
 			&.top {
 				display:block;
 				height: auto;
+				box-shadow: 0px 5px 10px fadeout(@black, 80%);
+				.content-header {
+				    text-align: center;
+				}
+	
 			}
 			
 			&.left {

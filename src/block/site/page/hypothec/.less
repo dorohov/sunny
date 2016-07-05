@@ -1,7 +1,9 @@
 .hypothec-page{
 	//opacity: @opacity;
 	.content-header{
-		padding: 90px 80px 30px 190px;
+		padding-top: 90px;
+		padding-right: 80px;
+		padding-bottom: 30px;
 	}
 	&.page-content-cont{
 		.bear{
@@ -15,8 +17,10 @@
 	}
 }
 .cont-bank-filters{
-	padding-left: 190px;
 	padding-right: 190px;
+	@media @media-size-xl{
+		padding-right: 100px;
+	}
 }
 .bank-filters{
 	display: flex;
@@ -56,9 +60,17 @@
 	margin-right: 40px;  
 	padding-right: 145px;
 	padding-bottom: 40px;
+	@media @media-size-xl{
+		padding-right: 40px;
+	}
 } 
 ._hp__blue-box{
-	padding: 25px 40px 35px 190px;
+	padding-top: 25px;
+	padding-right: 40px;
+	padding-bottom: 35px;
+	@media @media-size-xl{
+		padding-right: 40px;
+	}
 	._heading{
 		font-family: @proxima-bold;
 	    font-size: 32px;
@@ -70,32 +82,49 @@
    		line-height: 36px;
 		font-family: @proxima-light;
 		align-items: center;
+		@media @media-size-xl{
+		    font-size: 22px;
+	   		line-height: 28px;
+		}
 		._title{
 			font-family: @bebas;
 			text-transform: uppercase;    
 			font-size: 18px;
     		line-height: 26px;
     		letter-spacing: 1.2px;
+			@media @media-size-xl{
+			    font-size: 15px;
+		   		line-height: 23px;
+			}
 		}
 		._cb__col{
 			&:nth-child(1){width: 27%}
 			&:nth-child(2){width: 23%}
 			&:nth-child(3){width: 22%}
 			&:nth-child(4){width: 28%}
+			@media @media-size-xl{
+				&:nth-child(3){width: 20%}
+				&:nth-child(4){width: 30%}
+
+			}
 		}
 		.btn-site{
 			line-height: 50px;
 			font-family: @proxima-bold;    
 			font-size: 13px;
+			@media @media-size-xl{
+				font-size: 11px;
+				padding: 0 20px;
+			}
 		}
 	}
 }
 ._hp__content{
-	padding-left: 190px;
 	margin-top: 35px;
 	font-family: @proxima;
 	font-size: 16px;
 	line-height: 21px;
+	padding-bottom: 30px; 
 	b, strong{font-family: @proxima-semibold;}
 	h1, h2, h3, h4, h5, h6{
 		color: #262262;

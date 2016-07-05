@@ -1,5 +1,5 @@
 .content-header {
-	span {
+	h1 {
 		font-weight: 400;
 		display:block;
 		#fe.ff(@bebas-bold);
@@ -8,6 +8,13 @@
 		#fe.lh(1em);
 		#fe.uppercase();
 		letter-spacing: 3px;
+	}
+	span{
+		font-size: 16px;
+		color: lighten(@black, 60%);
+		font-family: @proxima-semibold;
+		text-transform: uppercase;
+		line-height: 24px;
 	}
 	
 	&.on-page-404 {

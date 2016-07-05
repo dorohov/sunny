@@ -57,6 +57,7 @@
 				left:0;
 				#fe.w(57%);
 				
+				@media @media-size-xl{#fe.w(45%);}
 				iframe.iframe-yandex-map, iframe.iframe-layout-map {
 					display:block;
 					position:absolute;
@@ -71,6 +72,7 @@
 			&.right {
 				right:0;
 				#fe.w(43%);
+				@media @media-size-xl{#fe.w(55%);}
 			}
 			
 		}
@@ -85,6 +87,11 @@
 			&.top {
 				display:block;
 				height: auto;
+				box-shadow: 0px 5px 10px fadeout(@black, 80%);
+				.content-header {
+				    text-align: center;
+				}
+	
 			}
 			
 			&.left {

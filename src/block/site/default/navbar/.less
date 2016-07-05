@@ -31,12 +31,14 @@
 	justify-content: center;
 	> li{
 		margin: 0 35px;
+		@media @media-size-xl{margin: 0 25px;}
 		> a{
 			text-transform: uppercase;
 			font-size: 14px;
 			color: lighten(@black, 20%);
 			//padding: 30px 15px;
 			padding: 20px 15px;
+			@media @media-size-xl{padding: 20px 10px;}
 			letter-spacing: 0.7px;
 			transition: @transition-site;
 			span{
