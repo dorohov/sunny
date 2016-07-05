@@ -84,6 +84,7 @@
 			
 			&.top {
 				display:block;
+				height: auto;
 			}
 			
 			&.left {
@@ -197,7 +198,6 @@
 		position:absolute;
 		overflow:hidden;
 		transition:all @trans-speed ease;
-		bottom:0;
 		z-index:12;
 		#fe.h(100%);
 		
@@ -207,9 +207,12 @@
 			top:0;
 			#fe.w(100%);
 			#fe.h(150px);
-			#fe.bg(#ffffff);
+			#fe.bg(#ffffff);    
+			height: 130px;
+    		z-index: 14;
 		}
 		&.left {
+			bottom:0;
 			#fe.w(50%);
 			#fe.bpos();
 			#fe.brep();
@@ -230,6 +233,7 @@
 			}
 		}
 		&.right {
+			bottom:0;
 			z-index:14;
 			#fe.w(50%);
 			#fe.bg(transparent);
