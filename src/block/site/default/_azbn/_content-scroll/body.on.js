@@ -43,13 +43,16 @@
 		}
 		else {
 			var _h = obj.height - _h_default - pcc.find('.cont-header').outerHeight(true);
+		};
+
+		if (!device.mobile() && !device.tablet()){
+			cs.css({
+				'height' : _h + 'px',
+				//'margin-top' : obj.height / 3,
+			});
+			cs.find('.scroll-container').trigger('init');
 		}
-		cs.css({
-			'height' : _h + 'px',
-			//'margin-top' : obj.height / 3,
-		});
 		
-		cs.find('.scroll-container').trigger('init');
 		
 	});
 	

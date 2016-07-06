@@ -3,6 +3,7 @@
 }
 ._ap__content-header{
 	padding-bottom: 50px;
+	@media @media-size-xs{padding-bottom: 25px;}
 	@media @media-size-lg{
 		padding-bottom: 35px;
 	}
@@ -15,13 +16,20 @@
 	padding-bottom: 20px;
 
 	margin-right: 60px;
+	@media @media-device{margin-right: 0px;}
 	@media @media-size-xl{margin-right: 100px;}
+}
+._ap__content-scroll{
+	@media @media-screen{margin-right: 25px;}
 }
 ._ap__content-margin{
 	padding-bottom: 40px;
 	padding-right: 110px;
 
 	margin-right: 60px;
+	@media @media-device{
+		margin-right: 0px;
+	}
 	@media @media-size-lg{ 
 		padding-right: 65px;
 	}

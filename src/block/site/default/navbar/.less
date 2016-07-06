@@ -1,13 +1,18 @@
 .navbar-site{
 	background: @white;
 	//opacity: @opacity;    
-	padding: 18px 0;
-	border-top: 1px solid #e8e8e8;
 	&.navbar-fixed-bottom{
 		@media @media-size-xs{			
 			bottom: inherit;
 			top: 0;
 		}
+	}
+	@media @media-device {
+		border-bottom: 1px solid #e8e8e8;
+	}
+	@media @media-screen {
+		padding: 18px 0;
+		border-top: 1px solid #e8e8e8;
 	}
 }
 ._nh__logotip{

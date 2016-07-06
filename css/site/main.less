@@ -17,6 +17,9 @@ body {
 			//padding-bottom: 96px;	
 		}
 	}
+	@media @media-size-xs-p{	
+		padding-top: 96px!important;	 
+	}
 }
 .index-page{
 	//background: url('@{url-path-img}/index/bg-page.jpg') no-repeat center;
@@ -228,10 +231,15 @@ a{
 }
 .p-main-left{
 	padding-left: 190px;
+	@media @media-device{
+		padding-left: 15px!important; 
+		padding-right: 15px!important;
+	}
 	@media @media-size-lg{padding-left: 110px;}
 	@media @media-size-xl{padding-left: 140px;}
 }
 .p-header-top{
 	padding-top: 90px;
+	@media @media-size-xs-p{padding-top: 33px;}
 	@media @media-size-lg{padding-top: 75px;}
 }
