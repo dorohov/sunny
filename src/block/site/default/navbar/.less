@@ -31,6 +31,7 @@
 	justify-content: center;
 	> li{
 		margin: 0 35px;
+		@media @media-size-lg{margin: 0 15px;}
 		@media @media-size-xl{margin: 0 25px;}
 		> a{
 			text-transform: uppercase;
@@ -38,6 +39,10 @@
 			color: lighten(@black, 20%);
 			//padding: 30px 15px;
 			padding: 20px 15px;
+			@media @media-size-lg{
+				padding: 5px 10px;
+				font-size: 13px;
+			}
 			@media @media-size-xl{padding: 20px 10px;}
 			letter-spacing: 0.7px;
 			transition: @transition-site;
@@ -147,14 +152,6 @@
 				padding: 15px;
 			}
 		}
-	}
-	@media @media-screen-HD720 {
-		> li{
-			> a{
-				padding: 15px;
-			}
-		}
-
 	}
 }
 /* -----------------------------------------------------------------------------

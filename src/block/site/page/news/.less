@@ -5,10 +5,28 @@
 			background-size: 107px;
 			right: 40em;
 			top: .6em;
+			@media @media-size-lg{    
+				background-size: 78px;
+				right: 32em;
+				top: -1.4em;
+			}
 			@media @media-size-xl{
 			    right: 29em;
     			background-size: 55px;
 			}
 		}
 	}
+	@media @media-size-lg{
+		.content-scroll .scroll-element {
+		    width: 105%;
+		}
+	}
+}
+._np__content-header{
+	padding-bottom: 35px;
+}
+._np__content-scroll{
+	margin-top: 40px;
+	margin-right: 60px;
+	@media @media-size-lg{margin-top: 25px;}
 }

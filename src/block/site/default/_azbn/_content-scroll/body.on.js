@@ -10,17 +10,39 @@
 
 		
 		
-		if (_h_page == 'none'){
-			var _h = obj.height - 70 - pcc.find('.cont-header').outerHeight(true);
+		if (screenJS.czr_isLG()) {
+			var	_h_default = 140,
+				_h_default_news_item = 100,
+				_h_default_hyp = 250,
+				_h_default_doc = 230,
+				_h_default_gallery = 150,
+				_h_default_none = 30;
+		} else {
+			var _h_default = 170,
+				_h_default_news_item = 170,
+				_h_default_hyp = 370,
+				_h_default_doc = 280,
+				_h_default_gallery = 140,
+				_h_default_none = 70;
 		}
-		else if (_h_page == 'default-doc'){
-			var _h = obj.height - 280 - pcc.find('.cont-header').outerHeight(true);
+
+		if (_h_page == 'none'){
+			var _h = obj.height - _h_default_none - pcc.find('.cont-header').outerHeight(true);
+		}
+		else if (_h_page == 'default-news-item'){
+			var _h = obj.height - _h_default_news_item - pcc.find('.cont-header').outerHeight(true);
 		}
 		else if (_h_page == 'default-gallery'){
-			var _h = obj.height - 140 - pcc.find('.cont-header').outerHeight(true);
+			var _h = obj.height - _h_default_gallery - pcc.find('.cont-header').outerHeight(true);
+		}
+		else if (_h_page == 'default-doc'){
+			var _h = obj.height - _h_default_doc - pcc.find('.cont-header').outerHeight(true);
+		}
+		else if (_h_page == 'default-hyp'){
+			var _h = obj.height - _h_default_hyp - pcc.find('.cont-header').outerHeight(true);
 		}
 		else {
-			var _h = obj.height - 170 - pcc.find('.cont-header').outerHeight(true);
+			var _h = obj.height - _h_default - pcc.find('.cont-header').outerHeight(true);
 		}
 		cs.css({
 			'height' : _h + 'px',

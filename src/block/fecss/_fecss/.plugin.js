@@ -45,7 +45,12 @@ function fecss_ScreenJS() {
 	};
 	
 	ctrl.isLG = function() {
+		//return (ctrl.screen.w > 1199 && ctrl.screen.w < 1400);
 		return (ctrl.screen.w > 1199);
+	};
+	ctrl.czr_isLG = function() {
+		return (ctrl.screen.w > 1199 && ctrl.screen.w < 1400);
+		//return (ctrl.screen.w > 1199);
 	};
 	
 	ctrl.screenIs = function() {

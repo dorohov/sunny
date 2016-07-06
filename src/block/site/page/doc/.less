@@ -1,11 +1,15 @@
 .doc-page{
 	//opacity: @opacity;
-	.blue-box {max-width:925px;}
 	&.page-content-cont{
 		.bear{
 			background-size: 107px;
 			right: 18em;
 			top: 49.3em;
+			@media @media-size-lg{    
+				background-size: 78px;
+				right: 32em;
+				top: -2.5em;
+			}
 			@media @media-size-xl{
 				background-size: 85px;
 				right: 4em;
@@ -13,12 +17,25 @@
 		}
 	}
 }
+._dp__content-header{
+	padding-bottom: 35px;
+	@media @media-size-lg{padding-bottom: 25px;}
+}
+._dp__content-scroll{
+	margin-top: 30px;
+	margin-right: 25px; 
+	@media @media-size-lg{margin-top: 20px;}
+}
 ._dp__blue-box{
+	max-width:925px;
+
 	padding-top: 15px;
 	padding-right: 30px;
 	padding-bottom: 15px; 
 
-	margin-right: 40px;
+	margin-right: 40px;    
+	margin-bottom: 25px;
+	@media @media-size-lg{margin-right: 60px;}
 	@media @media-size-xl{
 		margin-right: 80px;
 	}

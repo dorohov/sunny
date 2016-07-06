@@ -38,11 +38,17 @@
 	@media @media-screen-WXGA768 {
 		margin-bottom: 20px; 
 	}
+	@media @media-size-lg2{
+		margin-bottom: 5px;
+	}
 	@media @media-screen-WSXGA900 {
 		margin-bottom: 40px; 
 	}
 	a{
 		color: @white;
+	}
+	.container-fluid{
+		&:before, &:after{display: none;}
 	}
 } 
 ._hs__flex{
@@ -98,6 +104,9 @@
 	@media @media-size-md{
 		width: 150px;
 	}
+	@media @media-size-lg{
+		img{height: 120px;}
+	}
 }
 ._hs__address{
 	text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.13);
@@ -106,6 +115,9 @@
 		padding-top: 25px;
 	}
 	@media @media-size-sm-l{
+		padding-top: 35px;
+	}
+	@media @media-size-lg{
 		padding-top: 35px;
 	}
 }

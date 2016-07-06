@@ -54,6 +54,13 @@
 		>div{width: 100%;}
 		text-align: center;
 	}
+	@media @media-size-lg{
+		>div{
+			&:nth-child(1){width: 55%;}
+			&:nth-child(2){width: 45%;}
+		}
+		
+	}
 
 }
 ._in__btn-red,
@@ -66,6 +73,7 @@
 ._in__btn-blue{	
 	font-size: 13px;
 	line-height: 60px;
+	text-align: center;
 	@media @media-size-xs{
 		padding: 0 15px;
 	}
@@ -94,6 +102,12 @@
 	@media @media-screen-WXGA768 {
 		padding: 25px 0;
 	}
+	@media @media-size-lg{
+		span{
+			font-size: 60px;
+    		line-height: 60px;
+		}
+	}
 }
 ._in__news-carousel{   
 	max-width: 390px;
@@ -115,6 +129,12 @@
 }
 ._in__carousel{
 	background: @white; 
+	.carousel-indicators{
+		@media @media-size-lg{
+			bottom: 20px;
+			padding: 0 25px;
+		}
+	}
 }
 ._in__item{
 	padding: 20px 35px 60px;
@@ -124,6 +144,10 @@
 	}
 	@media @media-screen-HD720 {
 		padding: 15px 35px 45px;
+		min-height: 150px;
+	}
+	@media @media-size-lg{
+		padding: 15px 25px 45px;
 		min-height: 150px;
 	}
 }
@@ -143,7 +167,10 @@
 		@media @media-size-xs{
 			font-size: 16px;
 			line-height: 20px;
-
+		}
+		@media @media-size-lg{
+			font-size: 16px;
+	    	line-height: 20px;
 		}
 	}
 }

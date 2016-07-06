@@ -4,6 +4,7 @@
 	.advantage-item {
 		position:relative;
 		padding:0 40px 83px 63px;
+		@media @media-size-lg{padding: 0 50px 40px;}
 		
 		.num {
 			position:absolute;
@@ -14,6 +15,7 @@
 			#fe.size(78px);
 			#fe.ff(@proxima);
 			#fe.lh(1em);
+			@media @media-size-lg{#fe.size(60px);}
 		}
 		.title {
 			margin-bottom:10px;
@@ -23,6 +25,10 @@
 			#fe.lh(24px);
 			#fe.ff(@bebas-bold);
 			letter-spacing: 0.8px;
+			@media @media-size-lg{
+				#fe.size(20px);
+				#fe.lh(22px);
+			}
 		}
 		.preview {
 			#fe.bold(400);
@@ -33,4 +39,15 @@
 		}
 	}
 	
+}
+._ap__flex{
+	display: flex;
+	flex-wrap: wrap;
+	margin-left: -15px;
+	margin-right: -15px;
+}
+._ap__col{
+	width: 50%;
+	padding-left: 15px;
+	padding-right: 15px;
 }

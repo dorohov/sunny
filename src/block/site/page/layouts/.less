@@ -5,6 +5,11 @@
 	    h1{
 	    	margin-bottom: 7px;
 	    }
+		@media @media-size-lg{
+		    padding: 32px 200px 22px;
+		    h1{font-size: 30px; margin-bottom: 5px;}
+		    span{font-size: 14px;}
+		}
 	}
 	.layouts-block{
 		background: url('@{url-path-img}/layouts/bg-layouts.jpg') no-repeat center;
@@ -20,6 +25,16 @@
 	    top: 147px!important;
 	    bottom: 0px!important;
 	    height: auto!important;
+		@media @media-size-lg{top: 117px!important;}
 	}
-	.logotip{top: 1em;}
+	.logotip{
+		top: 1em;
+		@media @media-size-lg{
+			top: 1.5em;
+			img{height: 95px!important}
+		}
+	}
+	&.page-content-cont .close-it{
+		@media @media-size-lg{top: 4em;}
+	}
 }
