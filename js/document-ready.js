@@ -65,7 +65,7 @@ $(".scroll-container").each(function(t){var r,o=$(this),a=$(o.attr("data-target"
 $(document.body).on("click.fecss.scrollto",".scrollto",{},function(t){t.preventDefault(),console.log("body trigger:click.fecss.scrollto");var o=$(this),l=$(o.attr("href")).eq(0),e=parseInt(o.attr("data-scrollto-diff"))||0,r=parseInt(o.attr("data-scrollto-speed"))||777;$("html, body").animate({scrollTop:l.offset().top+e},r)});
 
 
-$("img").addClass("img-responsive");var url=window.location.pathname;$('.navbar-nav a[href="'+url+'"]').parent().addClass("active"),$("._in__carousel .item").eq(0).addClass("active"),device.mobile()?$(".navbar-site").addClass("navbar-mobile"):(new WOW).init(),$(".navbar-mobile").autoHidingNavbar();
+$("img").addClass("img-responsive");var url=window.location.pathname;$('.navbar-nav a[href="'+url+'"]').parent().addClass("active"),$("._in__carousel .item").eq(0).addClass("active"),device.mobile()?$(".navbar-site").addClass("navbar-mobile"):(new WOW).init(),$(".navbar-mobile").autoHidingNavbar(),$(".fancybox").fancybox(),$(".fancybox-buttons").fancybox({openEffect:"none",closeEffect:"none",prevEffect:"none",nextEffect:"none",closeBtn:!1,helpers:{title:{type:"inside"},buttons:{}},afterLoad:function(){this.title=this.title}});
 
 $(document.body).on("click.site.page-content-cont.close-it",".page-content-cont .close-it",{},function(t){t.preventDefault();var e=$(this);e.closest(".page-content-cont").trigger("site.page-content-cont.state",[{state:"default"}])});
 	

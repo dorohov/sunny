@@ -4,6 +4,12 @@
 		margin:7px 0 24px;
 	    position: relative;
     	z-index: 16;
+		@media @media-size-xs-p{
+			margin:0px 0 20px;
+		}
+		@media @media-size-xs-l{
+			margin:0px;
+		}
 		@media @media-size-lg{margin:7px 0 15px;}
 		.bttn {
 			display:inline-block;
@@ -20,6 +26,15 @@
 			#fe.uppercase();
 			#fe.underline(none);
 			letter-spacing: .4px;
+			@media @media-size-xs-p{
+				display: block;
+				margin-right: 0;
+				margin-bottom: 10px;
+				text-align: center;
+			}
+			@media @media-size-xs-l{
+				margin-right: 15px;
+			}
 			@media @media-size-lg{
 				#fe.size(12px);
 				padding:3px 12px;
@@ -57,9 +72,6 @@
 			#fe.uppercase();
 			#fe.underline();    
 			letter-spacing: 1.3px;
-			@media @media-size-lg{
-				#fe.size(16px);
-			}
 			
 			&:focus {
 				#fe.color(#364ca8);
@@ -77,6 +89,13 @@
 				#fe.bpos(left center);
 				#site.bi('default/.date-filters/calendar.png');
 			}
+			@media @media-size-xs{
+				#fe.size(14px);
+				&.archive {margin-left: 0}
+			}
+			@media @media-size-lg{
+				#fe.size(16px);
+			}
 		}
 	}
 	
@@ -84,11 +103,17 @@
 		
 		.photo-item {
 			display:block;
-			margin:0 25px 30px 0px;
+			margin-bottom:30px;
 			#fe.bpos();
 			#fe.bsize(cover);
 			#fe.brep();
 			#fe.h(305px);
+			@media @media-size-xs{
+				height: 215px;
+			}
+			@media @media-size-xs-p{
+				margin-bottom: 15px;
+			}
 		}
 		
 	}

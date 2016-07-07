@@ -1,10 +1,15 @@
 .b-contacts{
 	padding: 30px 0px 75px;
+	@media @media-size-xs{padding: 5px 0px 20px;}
+	@media @media-size-sm{padding: 5px 0px 40px;}
 	@media @media-size-lg{padding: 15px 0px 45px;}
 	@media @media-size-lg2{padding: 15px 0px 30px;}
 	.b-contacts-flex{
 		display: flex;
 		margin: 0 -15px;
+		@media @media-size-xs{
+			flex-wrap: wrap;
+		}
 	} 
 	.heading{
 		color: @dark-blue; 
@@ -33,22 +38,37 @@
 			line-height: 60px;
 			color: #6ea93a;
 			margin-right: 10px;
+			width: 25%;
+			@media @media-size-xs{width: 19%;}
 			@media @media-size-lg{
 				font-size: 46px;
 				line-height: 46px;
 			}
-			width: 25%;
 		}
-		> div{width: 75%;}
+		> div{
+			width: 75%;
+			@media @media-size-xs{width: 81%;}
+		}
 		&.map{
 			width: 45%;
 			&:before{
 				content: @icon-location2;
 				margin-left: -10px;
 			}
+			@media @media-size-xs{
+				width: 100%;
+			    margin-bottom: 20px;
+			}
 		}
 		&.smart{
 			width: 40%;
+			@media @media-size-xs{
+				width: 100%;
+			    margin-bottom: 40px;
+				&:before{
+					margin-left: -10px;
+				}
+			}
 			&:before{
 				content: @icon-smart;
 			}
@@ -61,12 +81,20 @@
 		align-items: flex-start;
 		padding: 0 15px;
 		width: 15%;
+		@media @media-size-xs{
+			width: 100%;
+			flex-direction: row;
+			justify-content: flex-start;  
+		}
 		@media @media-size-lg2{
 			justify-content: center;
 		}
 		.icon{
 			text-decoration: none;
 			display: inline-block;
+			@media @media-size-xs{
+				margin-right: 10px;
+			}
 			&:before{
 				font-family: @icon;
 				display: block;
@@ -110,15 +138,28 @@
 	}
 }
 .b-form{
+	@media @media-device{margin-bottom: 30px;}
 	._heading{
 		font-family: @proxima-bold;
 		text-transform: uppercase;
 		color: @dark-blue;
 		font-size: 15px;    
 		margin-bottom: 15px;
+		@media @media-size-xs{
+			line-height: 23px;
+			margin-bottom: 20px;
+		}
 	}
 	.b-form__col2{
-		._cb__col{width: 50%;}	
+		._cb__col{
+			width: 50%;
+		}	
+		@media @media-size-xs{
+			flex-wrap: wrap;
+			._cb__col{
+				width: 100%;
+			}
+		}
 	}
 	.form-control{
 		border-radius: 0;
@@ -155,6 +196,7 @@
 	textarea.form-control{
 		padding: 15px 12px;
 		height: 110px; 
+		@media @media-size-xs{height: 140px;}
 		@media @media-size-lg{padding: 10px 12px;}
 	}
 	.btn-site{

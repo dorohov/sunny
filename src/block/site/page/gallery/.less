@@ -20,11 +20,28 @@
 ._galp__content-header{
 	padding-bottom: 20px;
 }
+._galp__content-scroll{
+	margin-right: 25px;
+	@media @media-device{margin-right: 0px;}
+}
 ._galp__content-margin{
 	padding-right: 80px;
 	padding-bottom: 40px;
 
 	margin-right: 40px; 
+	@media @media-device{margin-right: 0px;}
 	@media @media-size-lg{padding-right: 40px;}
 	@media @media-size-xl{padding-right: 40px;}
+}
+._galp__flex{
+	display: flex;
+	flex-wrap: wrap;
+	margin-right: -15px;
+	margin-left: -15px;
+}
+._galp__col{
+	width: 50%;
+	padding-left: 15px;
+	padding-right: 15px;
+	@media @media-size-xs-p{width: 100%;}
 }

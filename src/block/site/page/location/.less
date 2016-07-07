@@ -2,6 +2,12 @@
 	//opacity: @opacity;
 	.content-header {
 	    padding: 42px 200px;
+		@media @media-size-xs{
+	    	padding: 20px 25px;
+		}
+		@media @media-size-sm{
+	    	padding: 40px 25px;
+		}
 	}
 	.logotip{
 		@media @media-size-lg{
@@ -10,7 +16,7 @@
 		}
 	}
 	&.page-content-cont .close-it{
-		@media @media-size-lg{top: 4em;}
-		@media @media-size-xl{top:5em}
-	}
+		top: 5em!important;
+		@media @media-size-lg{top: 4em!important}
+	} 
 }

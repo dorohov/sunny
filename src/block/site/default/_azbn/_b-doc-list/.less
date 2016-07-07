@@ -1,6 +1,7 @@
 .b-doc-list {
 	//margin: 0 0 30px 0;
 	max-width: 640px;
+	@media @media-device{max-width: 100%;}
 	.doc-flex{
 		display: flex;
 		flex-wrap: wrap;
@@ -11,6 +12,12 @@
 		width: 50%;
 		padding-left: 15px;
 		padding-right: 15px;
+		@media @media-size-xs{
+			width: 100%;
+		}
+		@media @media-size-sm-l{
+			width: 33.3333%;
+		}
 	}
 	.doc-item {
 		//padding-left:45px;
@@ -27,6 +34,10 @@
 			//#fe.underline();
 			//#fe.lh(1em);    
 			line-height: 22px;
+			@media @media-size-xs{
+				#fe.size(16px);
+				#fe.lh(20px);  
+			}
 			@media @media-size-lg{#fe.size(14px);}
 			span{
 				border-bottom: 1px solid #cdd2e9;

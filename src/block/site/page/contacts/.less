@@ -15,5 +15,24 @@
 		border: none;
 		width: 100%;
 		height: 100%;
+		@media @media-device{
+			position: relative;
+		}
+		@media @media-size-xs-p{
+			height: 300px;
+		}
+		@media @media-size-xs-l{
+			height: 200px;
+		}
+		@media @media-size-sm-p{
+			height: 400px;
+		}
+		@media @media-size-sm-l{
+			height: 400px;
+		}
+	}
+	@media @media-device{
+		display: flex;
+		flex-wrap: wrap;
 	}
 }

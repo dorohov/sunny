@@ -12,7 +12,8 @@
 			}
 			@media @media-size-xl{
 				background-size: 85px;
-				right: 4em;
+			    right: 5em;
+    			top: 35.3em;
 			}
 		}
 	}
@@ -24,6 +25,9 @@
 ._dp__content-scroll{
 	margin-top: 30px;
 	margin-right: 25px; 
+	@media @media-size-xs{
+		margin: 0px;
+	}
 	@media @media-size-lg{margin-top: 20px;}
 }
 ._dp__blue-box{
@@ -35,8 +39,27 @@
 
 	margin-right: 40px;    
 	margin-bottom: 25px;
+	@media @media-size-xs{
+		margin-bottom: 30px;
+
+		padding-top: 10px;
+		padding-right: 0px!important;
+		padding-bottom: 10px;
+		padding-left: 0px!important;
+	}
+	@media @media-device{margin-right: 0px; max-width: 100%;}
 	@media @media-size-lg{margin-right: 60px;}
 	@media @media-size-xl{
 		margin-right: 80px;
+	}
+}
+._dp__content-margin{
+	padding-right: 110px;
+	padding-bottom: 40px;
+
+	margin-right: 40px;
+	@media @media-size-xs{
+		margin-right: 0px;
+
 	}
 }

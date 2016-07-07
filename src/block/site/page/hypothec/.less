@@ -3,6 +3,7 @@
 	.content-header{
 		padding-right: 80px;
 		padding-bottom: 30px;
+		@media @media-size-xs{padding-bottom: 25px;}
 		@media @media-size-lg{padding-bottom: 20px;}
 	}
 	&.page-content-cont{
@@ -16,6 +17,9 @@
 .cont-bank-filters{
 	padding-right: 190px;
 	padding-bottom: 25px;
+	@media @media-size-xs{
+		padding-bottom: 15px;
+	}
 	@media @media-size-xl{
 		padding-right: 100px;
 	}
@@ -55,12 +59,34 @@
 			}
 		}
 	}
+	@media @media-size-xs{
+		flex-wrap: wrap;
+		.bttn{
+			padding-bottom: 10px;
+		}
+	}
+	@media @media-size-xs-p{
+		> div{
+			width: 50%;
+		}
+	}
+	@media @media-size-xs-l{
+		> div{
+			width: 25%;
+		}
+	}
 } 
 ._hp__blue-box{
 	padding-top: 25px;
 	padding-right: 40px;
 	padding-bottom: 35px;
 	max-width: 995px;
+	@media @media-size-xs{
+		padding-bottom: 10px;
+	}
+	@media @media-device{
+		max-width: 100%;
+	}
 	@media @media-size-lg{
 		padding-top: 20px;
 		padding-bottom: 20px;
@@ -74,6 +100,22 @@
 	    font-size: 32px;
    		line-height: 42px;
    		margin-bottom: 30px;
+		@media @media-size-xs{
+			font-size: 24px;
+	   		line-height: 34px;
+			margin-bottom: 25px;
+		}
+		@media @media-size-sm{
+			font-size: 26px;
+	   		line-height: 36px;
+			margin-bottom: 25px;
+		}
+		@media @media-size-xs-p{
+			margin-bottom: 25px;
+		}
+		@media @media-size-xs-l{
+			margin-bottom: 15px;
+		}
 		@media @media-size-lg{
 			font-size: 20px;
 	   		line-height: 26px;
@@ -85,6 +127,11 @@
    		line-height: 36px;
 		font-family: @proxima-light;
 		align-items: center;
+		@media @media-size-xs{
+			flex-wrap: wrap;
+		    font-size: 25px;
+	   		line-height: 36px;
+		}
 		@media @media-size-lg{
 			font-size: 20px;
 	   		line-height: 26px;
@@ -99,6 +146,10 @@
 			font-size: 18px;
     		line-height: 26px;
     		letter-spacing: 1.2px;
+			@media @media-size-xs{
+				font-size: 14px;
+		   		line-height: 24px;
+		   	}
 			@media @media-size-lg{
 				font-size: 16px;
 		   		line-height: 24px;
@@ -114,6 +165,21 @@
 			&:nth-child(2){width: 23%}
 			&:nth-child(3){width: 22%}
 			&:nth-child(4){width: 28%}
+			@media @media-size-xs-p{
+				margin-bottom: 30px;
+				&:nth-child(1),
+				&:nth-child(3){width: 55%}
+				&:nth-child(2),
+				&:nth-child(4){width: 45%}
+			}
+			@media @media-size-xs-l{
+				margin-bottom: 20px;
+				&:nth-child(1),
+				&:nth-child(2),
+				&:nth-child(3){width: 33.3333%}
+				&:nth-child(4){width: 100%; text-align: center;}
+
+			}
 			@media @media-size-lg{
 				&:nth-child(3){width: 20%}
 				&:nth-child(4){width: 30%}
@@ -122,13 +188,22 @@
 			@media @media-size-xl{
 				&:nth-child(3){width: 20%}
 				&:nth-child(4){width: 30%}
-
 			}
 		}
 		.btn-site{
 			line-height: 50px;
 			font-family: @proxima-bold;    
 			font-size: 13px;
+			@media @media-size-xs{
+				padding: 0 20px;
+				font-size: 12px;
+			}
+			@media @media-size-sm-p{
+				span{display: none;}
+			}
+			@media @media-size-xs-p{
+				span{display: none;}
+			}
 			@media @media-size-lg{
 				font-size: 11px;
 				padding: 0 20px;
@@ -142,6 +217,11 @@
 }
 ._hp__content-scroll{
 	margin-top: 35px;
+	margin-right: 25px;
+	@media @media-device{
+		margin-top: 30px;
+		margin-right: 0;
+	}
 	@media @media-size-lg{margin-top: 25px;}
 }
 ._hp__content-scroll-inner{
@@ -149,6 +229,10 @@
 
 	padding-right: 145px;
 	padding-bottom: 40px;
+	@media @media-device{
+		padding: 0px;
+		margin: 0px;
+	}
 	@media @media-size-lg{padding-right: 25px;}
 	@media @media-size-xl{padding-right: 40px;}
 }
@@ -164,18 +248,21 @@
 		text-transform: uppercase;
 		font-family: @proxima-bold;
 		margin-bottom: 25px;
+		@media @media-size-xs{margin-bottom: 15px;}
 		@media @media-size-lg{margin-bottom: 15px;}
 	}
 	h4{
 		font-size: 16px;
 		line-height: 24px;
 		letter-spacing: .3px;
+		@media @media-size-xs{letter-spacing: 0;}
 	}
 	ul{
 		list-style: none;
 		margin-bottom: 15px;
 		li{
-			margin-bottom: 15px;
+			margin-bottom: 15px;    
+			padding-left: 20px;
 			&:before{
 				content: '';
 				width: 7px;
@@ -185,7 +272,8 @@
 				border-radius: 50%;
 				margin-right: 15px;
 				float: left;    
-				margin-top: 7px;
+				margin-top: 7px;    
+				margin-left: -20px;
 			}
 		}
 	}

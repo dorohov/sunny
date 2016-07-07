@@ -2,7 +2,7 @@
 	background: @white;
 	//opacity: @opacity;    
 	&.navbar-fixed-bottom{
-		@media @media-size-xs{			
+		@media @media-device{			
 			bottom: inherit;
 			top: 0;
 		}
@@ -17,17 +17,17 @@
 }
 ._nh__logotip{
 	display: none;
-	@media @media-size-xs {
+	@media @media-device {
 		display: block;    
 		float: left;
 	}
-	@media @media-size-xs-p {
-		max-width: 90px;
-		padding: 20px 15px
+	@media @media-device-p {
+		padding: 20px 15px;
+		img{width: 60px;}
 	}
-	@media @media-size-xs-l {
-		max-width: 80px;
+	@media @media-device-l {
 		padding: 10px 15px;
+		img{width: 50px;}
 	}
 }
 ._czr__navbar-nav{
@@ -36,6 +36,7 @@
 	justify-content: center;
 	> li{
 		margin: 0 35px;
+		@media @media-size-sm{margin: 0px;}
 		@media @media-size-lg{margin: 0 15px;}
 		@media @media-size-xl{margin: 0 25px;}
 		> a{
@@ -64,11 +65,11 @@
 				color: #50994d;
 				color: @green;
 				transition: @transition-site;
-				@media @media-size-sm-l{
+				/*@media @media-size-sm-l{
 					display: block;
 					margin: 0 auto 5px;
 					width: 28px;
-				}
+				}*/
 				@media @media-size-md {
 					display: block;
 					margin: 0 auto 5px;
@@ -142,10 +143,11 @@
 			width: 50%;
 		}
 	}
-	@media @media-size-sm-p{
+	@media @media-size-sm{
 		flex-wrap: wrap;
 		justify-content: center;
 		> li{
+			width: 50%;
 			> a{
 				padding: 15px;
 			}
@@ -153,9 +155,7 @@
 	}
 	@media @media-size-sm-l{
 		> li{
-			> a{
-				padding: 15px;
-			}
+			width: 33.333%;
 		}
 	}
 }
@@ -190,11 +190,11 @@
 	cursor: pointer;
 	transition: background 0.3s;
 	background: none;
-	@media @media-size-xs{
+	@media @media-device{
 		float: right;
 		width: 86px;
 	}
-	@media @media-size-xs-p{margin-top: 15px}
+	@media @media-device-p{margin-top: 15px}
 	@media @media-screen{
 		display: none;
 	}
@@ -204,10 +204,10 @@
 	span {
 		display: block;
 		position: absolute;
-		top: 44px;
-		left: 18px;
-		right: 18px;
-		height: 8px;
+		top: 30px;
+		left: 25px;
+		right: 25px;
+		height: 3px;
 		background: @green;
 		&:before,
 		&:after {
@@ -215,31 +215,16 @@
 			display: block;
 			left: 0;
 			width: 100%;
-			height: 8px;
+			height: 3px;
 			background: @green;
 			content: "";
 		}
 		&:before{
-			top: -20px;
-		}
+			top: -12px;
+		}			
 		&:after {
-			bottom: -20px;
+			bottom: -12px;
 		}
-			
-		//@media @media-size-xs{			
-			height: 5px;
-			top: 30px;
-			&:before,
-			&:after {
-				height: 5px;
-			}
-			&:before{
-				top: -17px;
-			}
-			&:after {
-				bottom: -17px;
-			}
-		//}
 	}
 }
 

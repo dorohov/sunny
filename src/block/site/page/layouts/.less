@@ -5,6 +5,12 @@
 	    h1{
 	    	margin-bottom: 7px;
 	    }
+		@media @media-size-xs{
+	    	padding: 20px 15px;
+		}
+		@media @media-size-sm{
+	    	padding: 40px 25px;
+		}
 		@media @media-size-lg{
 		    padding: 32px 200px 22px;
 		    h1{font-size: 30px; margin-bottom: 5px;}
@@ -35,7 +41,7 @@
 		}
 	}
 	&.page-content-cont .close-it{
-		@media @media-size-lg{top: 4em;}
-		@media @media-size-xl{top:5em}
-	}
+		top: 5em!important;
+		@media @media-size-lg{top: 4em!important}
+	} 
 }
