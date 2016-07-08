@@ -6,6 +6,15 @@
 		
 		if(obj && obj.state) {
 			$('.page-content-cont').trigger('site.page-content-cont.state', [obj]);
+			
+			/*
+			if(obj.state == 'default') {
+				$('.content-cont.right').attr('data-state', 'passive');
+			} else {
+				$('.content-cont.right').attr('data-state', 'default');
+			}
+			*/
+			
 		}
 		
 		/*

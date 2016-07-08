@@ -26,8 +26,6 @@
 				
 				//d.find(item[1]).eq(0).attr('data-state', 'active-3');
 				
-				//setTimeout(function(){},1000);
-				
 				$(item[0]).attr('class', d.find(item[1]).eq(0).attr('class'));
 				d.empty().remove();
 			}
@@ -39,6 +37,12 @@
 				// Добавляем запись в историю, используя pushState
 				window.history.pushState({href : href, target : target}, null, href);
 			}
+			
+			setTimeout(function(){
+					
+					$('.content-cont.right').attr('data-state', 'default');
+					
+				},2100);
 			
 			$(document.body).trigger('fecss.url-history.init', [{
 				state : state,

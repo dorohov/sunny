@@ -4,7 +4,10 @@
 		
 		var btn = $(this);
 		
+		//$('.content-cont.right').attr('data-state', 'passive');
+		
 		btn.closest('.page-content-cont').trigger('site.page-content-cont.state', [{state:'default'}]);
+		
 		location.href = '/';
 		
 	});
