@@ -1,10 +1,10 @@
 	
 	$(document.body).on('click.fecss.url-history', '.url-history', {}, function(event){
-		event.preventDefault();
 		
 		if(device.mobile() || device.tablet()) {
 			
 		} else {
+			event.preventDefault();
 			
 			var btn = $(this);
 			var href = btn.attr('href');
