@@ -39,82 +39,9 @@
 
 <script src="/js/modernizr-custom.js" ></script>	 
 	</head>
-	<body class="fecss " data-theme="starry" >
-		<!-- <header class="header-site _second__header-site">
-	<div class="container-fluid">
-		<div class="_cb__flex _hs__flex">
-			<div class="_cb__flex _col _hs__logo-block">
-				<div class="_cb__col">
-					<a class="_hs__logo" href="/"><img src="/img/default/logotip.jpg" alt=""></a>
-				</div>
-				<div class="_cb__col _hs__address">
-					<div>г. Тамбов, ул. Студенецкая, 16а, корп. 2, офис 8</div>
-					<div class="_hs__address-link"><a href="/contacts.html">Офис продаж на карте</a></div>
-				</div>
-			</div>
-			<div class="_cb__flex _col  _hs__phone-block">
-				<div class="_cb__col _hs__phone">
-					<a href="tel:+74752559707">+7 (4752) 55-97-27</a>
-				</div>
-				<div class="_cb__col">
-					<button type="button" data-toggle="modal" data-target="#modal-reviews" class="btn-site btn-green">Обратный звонок</button>
-				</div>
-			</div>
-		</div>
-	</div>
-</header>
+	<body class="fecss body-yandex-map" data-theme="starry" >
 		
-			 -->
-		
-		<div id="default-url-history-container" class="page-content-cont error-page " data-state="active" >
-
-	<a class="logotip" href="/">
-		<img src="/img/default/logotip-175.jpg" alt="" class="img-responsive">
-	</a>
-
-	<a class="close-it" href="#close-it" ></a>
-	
-	<div class="bear" ></div> 
-	
-	
-	<div class="content-cont top" >
-		top
-	</div>
-	<div class="content-cont left" >
-		
-		<iframe class="iframe-yandex-map" src="iframe-yandex-map.html" ></iframe> 
-		
-	</div>
-	<div class="content-cont right right-bg p-bottom-170" data-right-bg="page404"  data-state="passive" >
-		
-		<div class="cont-header " >
-			<div class="content-header content-margin p-left-110 p-right-110 p-top-70 p-bottom-35 on-page-404 " >
-				<span>Запрашиваемая страница не найдена</span>
-				<a href="/" >Перейти на главную страницу</a>
-			</div>
-		</div>
-		
-	</div>
-</div>
-			
-		<nav class="navbar navbar-site navbar-fixed-bottom">
-	<div class="navbar-header">	
-		<button class="c-hamburger c-hamburger--htx" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-        	<span>toggle menu</span>
-        </button>
-        <a href="/" class="_nh__logotip"><img src="/img/default/logotip-xs.png" alt="" ></a>
-	</div>
-	<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-		<ul class="nav navbar-nav _czr__navbar-nav">
-			<li><a href="/location.html" class="icon-location-map url-history "><span>Расположение</span></a></li>
-			<li><a href="/layouts.html" class="icon-building url-history "><span>Планировки</span></a></li>
-			<li><a href="/advantage.html" class="icon-ribbon url-history "><span>Преимущества</span></a></li>
-			<li><a href="/about.html" class="icon-construction url-history "><span>О застройщике</span></a></li>
-			<li><a href="/hypothec.html" class="icon-money url-history "><span>Ипотека</span></a></li>
-			<li><a href="/doc.html" class="icon-silhouette url-history "><span>Документы</span></a></li>
-		</ul>
-	</div>
-</nav>
+		<div class="yandex-map office-map" id="yandex-map" ></div>
 		
 		<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
 <!--[if lt IE 9]>
@@ -139,5 +66,7 @@
 <script src="/plugins/fancybox/source/helpers/jquery.fancybox-buttons.js?v=1.0.5"></script>
 
 <script src="/plugins/owl.carousel/owl.carousel.min.js"></script>  
+		<script src="//api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+		<script src="/js/document-ready-yandex-map.js" ></script> 
 	</body>
 </html> 

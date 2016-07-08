@@ -76,9 +76,9 @@
 	
 	<div class="content-cont top" ></div>
 	<div class="content-cont left" >
-		<iframe class="iframe-yandex-map" src="/iframe-yandex-map.html" ></iframe> 
+		<iframe class="iframe-yandex-map" src="/iframe-yandex-map-office.html" ></iframe> 
 	</div>
-	<div class="content-cont right right-bg p-bottom-170" data-right-bg="default-gallery" >
+	<div class="content-cont right right-bg p-bottom-170" data-right-bg="default-gallery" data-state="passive" >
 		<div class="content-inner">
 			<div class="cont-header" >
 				<div class="content-header content-margin p-header-top p-bottom-20 " >
@@ -109,18 +109,19 @@
 			</div>
 
 			<div class="cont-form">
-				<form action="" class="b-form">
+				<form action="" class="b-form _azbn-ajax-form">
 					<h3 class="_heading">возникли вопросы? Задайте их нам!</h3>
 					<div class="_cb__flex _col b-form__col2">
+						<input type="hidden" name="f[Прислано со страницы]" value="Контакты" />
 						<div class="_cb__col">
-							<input type="text" name="" placeholder="Ваше имя" class="form-control">
+							<input type="text" name="f[Имя]" placeholder="Ваше имя" class="form-control">
 						</div>
 						<div class="_cb__col">
-							<input type="tel" name="" placeholder="Ваш телефон" class="form-control">
+							<input type="tel" name="f[Телефон]" placeholder="Ваш телефон" class="form-control">
 						</div>
 					</div>
 					<div>
-						<textarea placeholder="Тема вопроса" class="form-control"></textarea>
+						<textarea name="f[Тема вопроса]" placeholder="Тема вопроса" class="form-control"></textarea>
 					</div>
 					<div>
 						<button type="submit" class="btn-site btn-green-dark">Отправить</button>

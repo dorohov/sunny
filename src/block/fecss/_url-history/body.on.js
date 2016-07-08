@@ -5,12 +5,6 @@
 		$.get(href, {}, function(data) {
 			// Обновление только текстового содержимого в сером блоке
 			
-			/*
-			$(document.body).trigger('fecss.url-history.init', [{
-				state : 'semi-active',
-			}]);
-			*/
-			
 			var t_arr = [];
 			
 			if(target != '' && typeof target != 'undefined' && target != 'undefined') {
@@ -29,6 +23,9 @@
 				$(item[0]).html(d.find(item[1]).eq(0).html());
 				//$(item[0]).attr('data-state', d.find(item[1]).eq(0).attr('data-state') || state);
 				state = d.find(item[1]).eq(0).attr('data-state') || state;
+				
+				//d.find(item[1]).eq(0).attr('data-state', 'active-3');
+				
 				$(item[0]).attr('class', d.find(item[1]).eq(0).attr('class'));
 				d.empty().remove();
 			}
@@ -40,6 +37,13 @@
 				// Добавляем запись в историю, используя pushState
 				window.history.pushState({href : href, target : target}, null, href);
 			}
+			
+			
+			setTimeout(function(){
+				$('.content-cont.right').attr('data-state', 'default');
+			},555);
+			
+			
 			
 			$(document.body).trigger('fecss.url-history.init', [{
 				state : state,
