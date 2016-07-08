@@ -5,6 +5,7 @@
 		var btn = $(this);
 		
 		btn.closest('.page-content-cont').trigger('site.page-content-cont.state', [{state:'default'}]);
+		location.href = '/';
 		
 	});
 	

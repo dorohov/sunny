@@ -7,6 +7,7 @@
 		if(obj && obj.state) {
 			$('.page-content-cont').trigger('site.page-content-cont.state', [obj]);
 		}
+		
 		/*
 		.each(function(index){
 			
@@ -26,6 +27,15 @@
 		
 		//if(obj && obj.state) {
 			$(this).attr('data-state', obj.state || 'default');
+			
+			/*
+			if(obj && obj.state && obj.state == 'default') {
+				$('.content-cont.right').attr('data-state', 'passive');
+			} else {
+				$('.content-cont.right').attr('data-state', 'default');
+			}
+			*/
+			
 		//}
 		
 	});

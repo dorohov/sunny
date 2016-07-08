@@ -6,6 +6,8 @@
 		var href = btn.attr('href');
 		var target = btn.attr('data-target');
 		
+		$('.content-cont.right').attr('data-state', 'passive');
+		
 		if(target && typeof target != 'undefined' && target != 'undefined') {
 			//href = target;
 		} else {
