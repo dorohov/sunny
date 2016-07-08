@@ -38,11 +38,12 @@
 				window.history.pushState({href : href, target : target}, null, href);
 			}
 			
+			
 			setTimeout(function(){
-					
-					$('.content-cont.right').attr('data-state', 'default');
-					
-				},2100);
+				$('.content-cont.right').attr('data-state', 'default');
+			},555);
+			
+			
 			
 			$(document.body).trigger('fecss.url-history.init', [{
 				state : state,

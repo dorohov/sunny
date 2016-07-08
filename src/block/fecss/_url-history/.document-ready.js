@@ -20,7 +20,11 @@
 			
 			var addToHistory = true;
 			
-			$(document.body).trigger('fecss.url-history.get', [href, target, addToHistory, 'active']);
+			setTimeout(function(){
+				$(document.body).trigger('fecss.url-history.get', [href, target, addToHistory, 'active']);
+			},555)
+			
+			
 			
 		}
 		

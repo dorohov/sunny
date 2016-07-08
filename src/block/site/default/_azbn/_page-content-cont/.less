@@ -1,3 +1,12 @@
+@keyframes animated-bear {
+	from {
+		opacity:0;
+	}
+	to {
+		opacity:1;
+	}
+}
+
 .page-content-cont {
 	z-index:10;
 	transition:all @trans-speed ease;
@@ -16,7 +25,6 @@
 		bottom:100%;
 		
 		.content-cont {
-			transition-delay:@trans-speed * 1;
 			
 			&.left {
 				left:-100%;
@@ -36,7 +44,6 @@
 		bottom:0;
 		
 		.content-cont {
-			transition-delay:@trans-speed * 1;
 			
 			&.left {
 				left:0;
@@ -61,11 +68,10 @@
 		bottom:0;
 		
 		.content-cont {
-			transition-delay:@trans-speed * 1;
 			
 			&.left {
 				left:0;
-				#fe.w(100%);//#fe.w(57%);
+				#fe.w(57%);
 				
 				@media @media-device{
 					#fe.w(100%); 
@@ -110,7 +116,6 @@
 		bottom:0;
 		
 		.content-cont {
-			transition-delay:@trans-speed * 1;
 			
 			&.top {
 				display:block;
@@ -210,6 +215,10 @@
 		position:absolute;
 		display:block;
 		right:5em;
+		animation-name:animated-bear;
+		animation-duration: @trans-speed * 3;
+		//animation-delay: @trans-speed * 2;
+		animation-timing-function: ease;
 		top:5em;
 		#fe.z(15);
 		#fe.w(139px);
@@ -318,11 +327,12 @@
 				}
 			}
 			
+			&[data-state="default"] {
+				right:0%;
+			}
 			&[data-state="passive"] {
 				right:-64%;
 				#fe.w(64%);
-				transition:all @trans-speed ease;
-		transition-delay:@trans-speed * 2;
 			}
 		}
 		
