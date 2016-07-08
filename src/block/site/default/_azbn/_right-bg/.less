@@ -21,6 +21,37 @@
 	
 	&[data-right-bg="page404"]:before {
 		#site.bi('default/.right-bg/page404-right-bg.png');
+		@media @media-size-xs{
+			content: '';
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			left: 0;
+			right: 0;
+		}
+		@media @media-size-sm{
+			content: '';
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			left: 0;
+			right: 0;
+		}
+		@media @media-size-sm-p{
+			background-size: 1060px;
+		}
+		@media @media-size-sm-l{
+			background-size: 1100px;
+		}
+		@media @media-size-lg{
+			background-size: 1140px;
+		}
+		@media @media-size-lg2{
+			background-size: 1000px;
+		}
+		@media @media-size-xl{
+			background-size: 1280px;
+		}
 	}
 	
 }
