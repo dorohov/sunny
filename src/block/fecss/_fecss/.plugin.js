@@ -50,6 +50,9 @@ function fecss_ScreenJS() {
 	ctrl.czr_isLG = function() {
 		return (ctrl.screen.w > 1199 && ctrl.screen.w < 1400);
 	};
+	ctrl.czr_isXL= function() {
+		return (ctrl.screen.w > 1399 && ctrl.screen.w < 1679);
+	};
 	ctrl.czr_screen = function() {
 		return (ctrl.screen.w > 1025);
 	};

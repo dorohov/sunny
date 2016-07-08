@@ -10,8 +10,34 @@
 <link type="image/x-icon" href="/favicon.ico" rel="shortcut icon" />
 <link type="image/x-icon" href="/favicon.ico" rel="icon" />
 
+<link rel="apple-touch-icon" sizes="57x57" href="/favicon/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="/favicon/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="/favicon/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="/favicon/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="/favicon/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="/favicon/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="/favicon/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="/favicon/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="/favicon/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="/favicon/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
+<link rel="manifest" href="/favicon/manifest.json">
+
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/favicon/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+
+
+<link rel="stylesheet" href="/plugins/owl.carousel/owl.carousel.css">
 <link href="/css/site.css" rel="stylesheet">
-<link href="/css/animate.min.css" rel="stylesheet"> 
+<link href="/css/animate.min.css" rel="stylesheet">
+
+<link rel="stylesheet" type="text/css" href="/plugins/fancybox/source/jquery.fancybox.css?v=2.1.4" media="screen" />
+<link rel="stylesheet" type="text/css" href="/plugins/fancybox/source/helpers/jquery.fancybox-buttons.css?v=1.0.5" />
+
+<script src="/js/modernizr-custom.js" ></script>	 
 	</head>
 	<body class="fecss " data-theme="starry" >
 		<!--<header class="header-site _second__header-site">
@@ -110,7 +136,7 @@
 						<div>от 12 мес.</div>
 					</div>
 					<div class="_cb__col">
-						<button type="button" class="btn-site btn-white-line ">расчитать <span>ипотеку</span></button>
+						<button type="button" data-toggle="modal" data-target="#modal-hyp" class="btn-site btn-white-line ">расчитать <span>ипотеку</span></button>
 					</div>
 				</div>
 			</div>
@@ -172,42 +198,65 @@
 		</ul>
 	</div>
 </nav>
+		
+		<footer class="footer-site">
+	<div class="_fs__flex">		
+		<div class="_fs__dorohovdesign">
+			<div><a href="http://www.dorohovdesign.ru/" target="_blank">Создание сайта</a></div>
+			<div><a href="http://www.dorohovdesign.ru/" target="_blank"><img src="/img/default/dorohovdesign.png" alt="" ></a></div>
+		</div>
+	</div> 
+</footer>
 
-		<script src="/js/modernizr-custom.js" ></script>
+		<div class="modal fade modal-site" id="modal-hyp" tabindex="-1" role="dialog" aria-hidden="true">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-body">
+				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>		
+				<form action="" class="b-form">
+					<h3 class="_heading">Оставьте заявку на просчет ипотеки!</h3>
+					<div class="_cb__flex _col b-form__col2">
+						<div class="_cb__col">
+							<input type="text" name="" placeholder="Ваше имя" class="form-control">
+						</div>
+						<div class="_cb__col">
+							<input type="tel" name="" placeholder="Ваш телефон" class="form-control">
+						</div>
+					</div>
+					<div>
+						<textarea placeholder="Ваше сообщение" class="form-control"></textarea>
+					</div>
+					<div class="b-form__btn-block">
+						<button type="submit" class="btn-site btn-green-dark">Отправить</button>
+					</div>
+				</form>		
+			</div>
+		</div>
+	</div>
+</div> 
 
-<script src="//api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
-<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+		<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
 <!--[if lt IE 9]>
 	<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
 	<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
 <![endif]-->
 
+<script src="/js/wow.min.js" ></script>
+<script src="/js/storage.js" ></script>
+<script src="/js/device.min.js" ></script>
 <script src="/js/jquery.min.js" ></script>
 
 <script src="/js/bootstrap.min.js" ></script>
 <script src="/js/jquery.bootstrap-autohidingnavbar.min.js" ></script>
-<script src="/js/storage.js" ></script>
-<script src="/js/device.min.js" ></script>
 <script src="/js/hamburger.js" ></script>
 <!--<script src="/js/azbn.js" ></script>-->
-<script src="/js/wow.min.js" ></script>
 
 <script src="/js/document-ready.js" ></script>
-<script src="/js/document-ready-yandex-map.js" ></script>
-
-<link rel="stylesheet" type="text/css" href="/plugins/fancybox/source/jquery.fancybox.css?v=2.1.4" media="screen" />
-<link rel="stylesheet" type="text/css" href="/plugins/fancybox/source/helpers/jquery.fancybox-buttons.css?v=1.0.5" />	 	
-
 		
 <script src="/plugins/fancybox/lib/jquery.mousewheel-3.0.6.pack.js"></script>
 <script src="/plugins/fancybox/source/jquery.fancybox.js?v=2.1.4"></script>
 <script src="/plugins/fancybox/source/helpers/jquery.fancybox-buttons.js?v=1.0.5"></script>
 
-
-<!-- <script src="/plugins/owl.carousel/owl.carousel.min.js"></script> 
-	<link rel="stylesheet" href="/plugins/owl-carousel/owl.carousel.css">
-
-		
---> 
+<script src="/plugins/owl.carousel/owl.carousel.min.js"></script>  
 	</body>
 </html> 

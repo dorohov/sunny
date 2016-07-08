@@ -18,3 +18,29 @@ if (w_window > 767){
 	$(".index-page").removeAttr("style");
 	//$(".navbar-site").addClass('navbar-fixed-top').removeClass('navbar-fixed-bottom');
 };
+
+if (device.mobile() || device.tablet()) {	
+	$("._in__carousel").removeAttr("data-ride").removeClass('carousel').removeClass('slide');
+	$("._in__carousel .carousel-indicators").css("display", "none");
+	$("._in__carousel .carousel-control").css("display", "none");
+	$('._in__carousel .carousel-inner').owlCarousel({
+		dots: true,
+		loop: true,
+		//nav: true,
+		//navText: [],
+		items:1,
+		autoplay:true,
+    	autoplayTimeout:10000,
+    	autoplayHoverPause:true
+	}); 
+}
+$('._nip__carousel-inner').owlCarousel({
+	//dots: fasle,
+	//loop: true,
+	nav: true,
+	navText: [],	
+	responsive : {
+	    0 : {items:1},
+	    768 : {items:3}
+	}
+}); 
