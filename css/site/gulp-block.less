@@ -3463,6 +3463,7 @@ body {
 		.content-cont {
 			transition:all @trans-speed ease;
 			transition-delay:@trans-speed;
+			
 			&.left {
 				left:-100%;
 				#fe.w(40%);
@@ -3475,11 +3476,32 @@ body {
 			
 		}
 	}
+	&[data-state="semi-active"] {
+		top:0;
+		bottom:0;
+		
+		.content-cont {
+			transition:all @trans-speed ease;
+			transition-delay:@trans-speed;
+			&.left {
+				left:0;
+				#fe.w(100%);
+			}
+			
+			&.right {
+				right:-64%;
+				#fe.w(64%);
+			}
+			
+		}
+	}
 	&[data-state="active"], &[data-state="active-0"] {
 		top:0;
 		bottom:0;
 		
 		.content-cont {
+			transition:all @trans-speed ease;
+			transition-delay:@trans-speed;
 			
 			&.left {
 				left:0;
@@ -3504,6 +3526,8 @@ body {
 		bottom:0;
 		
 		.content-cont {
+			transition:all @trans-speed ease;
+			transition-delay:@trans-speed;
 			
 			&.left {
 				left:0;
@@ -3552,6 +3576,8 @@ body {
 		bottom:0;
 		
 		.content-cont {
+			transition:all @trans-speed ease;
+			transition-delay:@trans-speed;
 			
 			&.top {
 				display:block;

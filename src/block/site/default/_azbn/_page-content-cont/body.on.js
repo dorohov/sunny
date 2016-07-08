@@ -2,6 +2,8 @@
 	$(document.body).on('fecss.url-history.init', null, {}, function(event, obj){
 		event.preventDefault();
 		
+		//$('.page-content-cont .content-cont').delay(300);
+		
 		if(obj && obj.state) {
 			$('.page-content-cont').trigger('site.page-content-cont.state', [obj]);
 		}
