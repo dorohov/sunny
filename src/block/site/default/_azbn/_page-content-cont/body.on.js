@@ -17,6 +17,7 @@
 			
 		}
 		
+		
 		/*
 		.each(function(index){
 			
@@ -46,6 +47,9 @@
 			*/
 			
 		//}
+		
+		
+		$(document.body).trigger('site.page-content-cont.b-photogallery.date-filters.init');
 		
 	});
 	

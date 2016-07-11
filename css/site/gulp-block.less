@@ -3658,15 +3658,21 @@ body {
 			&.left {
 				top:8em;
 				#fe.w(100%);//
+				#fe.bg(#ffffff);
+				#site.bi(none);
 				
 				iframe.iframe-yandex-map, iframe.iframe-layout-map {
 					display:block;
 					position:absolute;
 					left:0;
-					top:0;
+					bottom:0;
 					border:none;
 					#fe.w(100%);
 					#fe.h(100%);
+					
+					.mobile &, .tablet & {
+						#fe.h(90%);
+					}
 				}
 			}
 			
