@@ -1,4 +1,4 @@
-	
+	/*
 	$(document.body).on('click.fecss.url-history', '.url-history', {}, function(event){
 		
 		if(device.mobile() || device.tablet()) {
@@ -30,4 +30,4 @@
 		
 		
 	});
-	
+	*/
