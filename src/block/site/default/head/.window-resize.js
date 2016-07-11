@@ -44,3 +44,10 @@ $('._nip__carousel-inner').owlCarousel({
 	    768 : {items:3}
 	}
 }); 
+if (device.mobile()) {
+	//var _h__page = h_window - h_navbar;
+	//$('.layouts-page .iframe-yandex-map').css('width', w_window).css('height', _h__page);
+}
+if (device.iphone()) {
+	//$('.layouts-page .iframe-yandex-map').attr("scrolling", "no").css(' -webkit-overflow-scrolling', 'touch');
+}
