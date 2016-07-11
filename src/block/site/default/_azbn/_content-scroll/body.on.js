@@ -11,23 +11,26 @@
 		
 		
 		if (screenJS.czr_isLG()) {
-			var	_h_default = 140,
+			var	_h_default = 170,
 				_h_default_news_item = 160,
-				_h_default_hyp = 250,
+				_h_default_hyp = 285,
 				_h_default_doc = 230,
 				_h_default_gallery = 150,
-				_h_default_none = 30;
-		} else  {
-			var _h_default = 170,
-				_h_default_news_item = 250,
-				_h_default_hyp = 370,
-				//_h_default_hyp = 270,
-				_h_default_doc = 280,
-				_h_default_gallery = 140,
 				_h_default_none = 70;
+		} else  {
+			var _h_default = 250,
+				_h_default_news_item = 250,
+				_h_default_hyp = 430,
+				//_h_default_hyp = 270,
+				_h_default_doc = 340,
+				_h_default_gallery = 140,
+				_h_default_none = 100;
 		}
 		if(screenJS.czr_isXL()){
-			var _h_default_hyp = 300;
+			var _h_default = 250,
+			_h_default_none = 100, 
+			_h_default_doc = 340,
+			_h_default_hyp = 350;
 		} 
 		if (_h_page == 'none'){
 			var _h = obj.height - _h_default_none - pcc.find('.cont-header').outerHeight(true);

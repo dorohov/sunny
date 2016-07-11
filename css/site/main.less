@@ -310,3 +310,35 @@ h3{
 	background: @white;
 	transition: all 0.3s ease;
 }
+.down-btn{
+	padding: 0 30px;
+	margin-top: 20px;
+	&:before{
+		content: '';
+		width: 32px;
+		height: 32px;
+		display: block;
+		margin: 0 auto;
+		background: url('@{url-path-img}/default/down.gif') no-repeat center;
+	}
+	@media @media-device {
+		display: none;
+	}
+	@media @media-size-lg {
+		margin-top: 10px;
+		&:before{
+			background-size: 25px; 
+		}
+	}
+	@media @media-size-xl {
+		margin-top: 15px;
+		&:before{
+			background-size: 28px; 
+		}
+	}
+}
+.doc-page{
+	.down-btn{
+		@media @media-size-lg {display: none;}
+	}
+}
