@@ -41,6 +41,12 @@
 			
 			setTimeout(function(){
 				$('.content-cont.right').attr('data-state', 'default');
+				
+				$(document.body).on('site.page-content-cont.b-photogallery.date-filters.restruct');
+				//$(document.body).on('site.page-content-cont.b-photogallery.date-filters.reshow', [0]);
+				
+				$('._czr__loader.page-loader').removeClass('active');
+				
 			},555);
 			
 			

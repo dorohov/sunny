@@ -20,6 +20,8 @@
 			
 			var addToHistory = true;
 			
+			$('._czr__loader.page-loader').addClass('active');
+			
 			setTimeout(function(){
 				$(document.body).trigger('fecss.url-history.get', [href, target, addToHistory, 'active']);
 			},555)

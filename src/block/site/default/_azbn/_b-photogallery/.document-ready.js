@@ -4,7 +4,17 @@
 		
 		//var items = $('.page-content-cont .b-photogallery .date-filters');
 		$('.page-content-cont .b-photogallery .date-filters').hide();
-		$('.page-content-cont .b-photogallery .date-filters[data-flt="' + flt + '"]').show('fast');
+		$('.page-content-cont .b-photogallery .date-filters[data-flt="' + flt + '"]').fadeIn('fast');
+		
+	});
+	
+	$(document.body).on('site.page-content-cont.b-photogallery.date-filters.showactive', null, {}, function(event){
+		event.preventDefault();
+		
+		var flt = $('.page-content-cont .b-photogallery .street-filters a.active').attr('data-flt') || 0;
+		
+		$('.page-content-cont .b-photogallery .date-filters').hide();
+		$('.page-content-cont .b-photogallery .date-filters[data-flt="' + flt + '"]').fadeIn('fast');
 		
 	});
 	

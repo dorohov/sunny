@@ -49,7 +49,8 @@
 		//}
 		
 		
-		$(document.body).trigger('site.page-content-cont.b-photogallery.date-filters.init');
+		$(document.body).trigger('site.page-content-cont.b-photogallery.date-filters.restruct');
+		$(document.body).trigger('site.page-content-cont.b-photogallery.date-filters.showactive');
 		
 	});
 	
