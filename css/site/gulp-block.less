@@ -1494,6 +1494,9 @@ body {
 					margin: 0 auto 5px;
 					width: 28px;
 				}*/
+				@media @media-device {
+					margin-right: 25px;
+				}
 				@media @media-size-md {
 					display: block;
 					margin: 0 auto 5px;
@@ -1513,7 +1516,10 @@ body {
 			&.icon-ribbon{
 				&:before{
 					font-size: 40px;
-					content: @icon-ribbon;
+					content: @icon-ribbon;					
+					@media @media-device {
+						margin-right: 14px;
+					}
 				}
 			}
 			&.icon-silhouette{
@@ -2176,10 +2182,10 @@ body {
 			}
 		}
 		._cb__col{
-			&:nth-child(1){width: 27%}
-			&:nth-child(2){width: 23%}
+			&:nth-child(1){width: 26%}
+			&:nth-child(2){width: 22%}
 			&:nth-child(3){width: 22%}
-			&:nth-child(4){width: 28%}
+			&:nth-child(4){width: 30%}
 			@media @media-size-xs-p{
 				margin-bottom: 30px;
 				&:nth-child(1),
@@ -2302,6 +2308,7 @@ body {
 	    }
 		@media @media-size-xs{
 	    	padding: 20px 15px;
+	    	display: none;
 		}
 		@media @media-size-sm{
 	    	padding: 40px 25px;
@@ -2351,6 +2358,7 @@ body {
 	    padding: 42px 200px;
 		@media @media-size-xs{
 	    	padding: 20px 25px;
+	    	display: none;
 		}
 		@media @media-size-sm{
 	    	padding: 40px 25px;
