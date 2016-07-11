@@ -1,4 +1,13 @@
 	
+	$(document.body).on('site.page-content-cont.b-photogallery.date-filters.reshow', null, {}, function(event, flt){
+		event.preventDefault();
+		
+		//var items = $('.page-content-cont .b-photogallery .date-filters');
+		$('.page-content-cont .b-photogallery .date-filters').hide();
+		$('.page-content-cont .b-photogallery .date-filters[data-flt="' + flt + '"]').show('fast');
+		
+	});
+	
 	$(document.body).on('click.site.page-content-cont.b-photogallery.street-filters.a', '.page-content-cont .b-photogallery .street-filters a', {}, function(event){
 		event.preventDefault();
 		
@@ -8,9 +17,8 @@
 		$('.page-content-cont .b-photogallery .street-filters a').removeClass('active');
 		btn.addClass('active');
 		
-		var items = $('.page-content-cont .b-photogallery .date-filters');
-		items.hide();
-		items.filter('[data-flt="' + flt + '"]').fadeIn('fast');
+		$(document.body).trigger('site.page-content-cont.b-photogallery.date-filters.reshow', [flt]);
+		//alert(flt);
 		
 	});
 	
@@ -29,13 +37,25 @@
 		
 	});
 	
-	$('.page-content-cont .b-photogallery .date-filters').each(function(index){
+	
+	$(document.body).on('site.page-content-cont.b-photogallery.date-filters.restruct', null, {}, function(event){
+		event.preventDefault();
 		
-		var block = $(this);
-		block.find('a.gal-bttn').hide();
-		block.find('a.gal-bttn').eq(0).show();
-		block.find('a.gal-bttn').eq(1).show();
-		block.find('a.gal-bttn').eq(2).show();
+		$('.page-content-cont .b-photogallery .date-filters').each(function(index){
+			
+			var block = $(this);
+			block.find('a.gal-bttn').hide();
+			
+			block.find('a.gal-bttn.active').insertBefore(block.find('a.gal-bttn').eq(0));
+			
+			block.find('a.gal-bttn').eq(0).show();
+			block.find('a.gal-bttn').eq(1).show();
+			block.find('a.gal-bttn').eq(2).show();
+			
+		});
 		
 	});
+	
+	$(document.body).trigger('site.page-content-cont.b-photogallery.date-filters.restruct');
+	
 	

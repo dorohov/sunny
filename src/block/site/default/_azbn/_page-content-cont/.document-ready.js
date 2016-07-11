@@ -13,7 +13,7 @@
 		
 		btn.closest('.page-content-cont').trigger('site.page-content-cont.state', [{state:'default'}]);
 		
-		location.href = '/';
+		//location.href = '/';
 		
 	});
 	
@@ -36,3 +36,9 @@
 	
 	$('.page-content-cont .content-cont .doc-filter a').eq(0).trigger('click.site.page-content-cont.doc-filter.a');
 	
+	
+	if(device.mobile() || device.tablet()) {
+		
+		$('body > .index-page').empty().remove();
+		
+	}
