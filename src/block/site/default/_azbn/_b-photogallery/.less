@@ -74,12 +74,18 @@
 			letter-spacing: 1.3px;
 			
 			&:focus {
-				#fe.color(#364ca8);
-				#fe.underline(none);
+				#fe.color(#aeaeae);
+				//#fe.underline(none);
 			}
 			
 			&:hover {
 				#fe.color(#364ca8);
+				#fe.underline(none);
+			}
+			&.active {
+				#fe.color(#364ca8);
+				text-decoration: none;
+				cursor: default;
 			}
 			
 			&.archive {
