@@ -44,3 +44,10 @@
 		$('body > .index-page').empty().remove();
 		
 	}
+	
+	$(document.body).on('click.site.page-content-cont.hypothec-modal-btn', '.page-content-cont .content-cont .hypothec-modal-btn', {}, function(event){
+		event.preventDefault();
+		
+		$('#modal-hyp').modal();//options
+		
+	});

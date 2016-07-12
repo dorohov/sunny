@@ -16,7 +16,13 @@ $(document.body).on('move-scroll', '.scroll-container', {}, function(event, scro
 	
 	var pos = _line_h * percent;
 	
-	scroll.css({'top':pos + 'px'});
+	if(pos > _line_h) {
+		scroll.css({'top':_line_h + 'px'});
+	} else if(pos < 0) {
+		scroll.css({'top':0 + 'px'});
+	} else {
+		scroll.css({'top':pos + 'px'});
+	}
 	
 });
 
