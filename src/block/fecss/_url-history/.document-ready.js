@@ -9,6 +9,7 @@
 			var btn = $(this);
 			var href = btn.attr('href');
 			var target = btn.attr('data-target');
+			var preloader = parseInt(btn.attr('data-preloader') || 0);
 			
 			$('.content-cont.right').attr('data-state', 'passive');
 			
@@ -20,7 +21,9 @@
 			
 			var addToHistory = true;
 			
-			$('._czr__loader.page-loader').addClass('active');
+			if(preloader) {
+				$('._czr__loader.page-loader').addClass('active');
+			}
 			
 			setTimeout(function(){
 				$(document.body).trigger('fecss.url-history.get', [href, target, addToHistory, 'active']);

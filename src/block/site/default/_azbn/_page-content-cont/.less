@@ -230,7 +230,7 @@
 		right:5em;
 		animation-name:animated-bear;
 		animation-duration: @trans-speed * 3;
-		//animation-delay: @trans-speed * 2;
+		animation-delay: @trans-speed * 2;
 		animation-timing-function: ease;
 		top:5em;
 		#fe.z(15);
@@ -281,7 +281,7 @@
 	}
 	
 	.content-cont {
-		transition:all @trans-speed ease;
+		transition:all @trans-speed * 1.46 ease-in;
 		//transition-delay:@trans-speed * 1;
 		z-index:12;
 		#fe.h(100%);

@@ -83,3 +83,21 @@ $(function() {
 	}
 	
 });
+
+$(function() {
+	
+	$('map[name="layouts-image-map"]').find('area').hover(
+		function(){
+			
+			var flt = $(this).attr('data-flt');
+			
+			$('.ttip').hide();
+			$('.ttip[data-flt="' + flt + '"]').fadeIn('fast');
+			
+		},
+		function(){
+			//$('#b-11 .image-map .ttip').hide();
+		}
+	);
+	
+});

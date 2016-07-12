@@ -39,10 +39,12 @@
 	$('.page-content-cont .content-cont .doc-filter a').eq(0).trigger('click.site.page-content-cont.doc-filter.a');
 	
 	
-	if(device.mobile() || device.tablet()) {
-		
-		$('body > .index-page').empty().remove();
-		
+	if(!$('body').eq(0).hasClass('page-id-1')) {
+		if(device.mobile() || device.tablet()) {
+			
+			$('body > .index-page').empty().remove();
+			
+		}
 	}
 	
 	$(document.body).on('click.site.page-content-cont.hypothec-modal-btn', '.page-content-cont .content-cont .hypothec-modal-btn', {}, function(event){
@@ -51,3 +53,4 @@
 		$('#modal-hyp').modal();//options
 		
 	});
+	
