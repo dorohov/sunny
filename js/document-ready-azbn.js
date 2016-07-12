@@ -57,3 +57,29 @@ $(function() {
 	
 });
 
+
+$(function() {
+	
+	$(document.body).on('click', '.hypothec-switcher-btn', {}, function(event){
+		event.preventDefault();
+		
+		var btn = $(this);
+		var flt = btn.attr('data-flt');
+		
+		$('.hypothec-switcher-btn').removeClass('active');
+		btn.addClass('active');
+		
+		$('.hypothec-flt-block').hide();
+		$('.hypothec-flt-block[data-flt="' + flt + '"]').fadeIn('fast');
+		
+		$('.scroll-container').trigger('init');
+		
+	});
+	
+	if($('.hypothec-switcher-btn.active').length) {
+		$('.hypothec-switcher-btn.active').eq(0).trigger('click');
+	} else {
+		$('.hypothec-switcher-btn').eq(0).trigger('click');
+	}
+	
+});

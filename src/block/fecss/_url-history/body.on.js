@@ -42,7 +42,8 @@
 			setTimeout(function(){
 				$('.content-cont.right').attr('data-state', 'default');
 				
-				$(document.body).on('site.page-content-cont.b-photogallery.date-filters.restruct');
+				$(document.body).trigger('site.page-content-cont.b-photogallery.date-filters.restruct');
+				$('.hypothec-switcher-btn').eq(0).trigger('click');
 				//$(document.body).on('site.page-content-cont.b-photogallery.date-filters.reshow', [0]);
 				
 				$('._czr__loader.page-loader').removeClass('active');

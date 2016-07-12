@@ -313,6 +313,9 @@ h3{
 .down-btn{
 	padding: 0 30px;
 	margin-top: 20px;
+	transition:all @trans-speed ease;
+	opacity:1;
+	
 	&:before{
 		content: '';
 		width: 32px;
@@ -322,8 +325,10 @@ h3{
 		background: url('@{url-path-img}/default/down.gif') no-repeat center;
 	}
 	&.hidden {
-		display: none;
+		opacity:0;
 	}
+	
+	
 	@media @media-device {
 		display: none;
 	}
