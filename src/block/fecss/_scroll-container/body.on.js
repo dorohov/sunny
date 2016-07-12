@@ -1,4 +1,24 @@
 
+$(document.body).on('site.down-btn.reshow', '.down-btn', {}, function(event, prop) {
+	event.preventDefault();
+	
+	var block = $(this);
+	if(prop > 0.9) {
+		if(block.hasClass('hidden')) {
+			
+		} else {
+			block.addClass('hidden');
+		}
+	} else {
+		if(block.hasClass('hidden')) {
+			block.removeClass('hidden');
+		} else {
+			
+		}
+	}
+	
+});
+
 $(document.body).on('move-scroll', '.scroll-container', {}, function(event, scrolltop) {
 	event.preventDefault();
 	
@@ -23,6 +43,8 @@ $(document.body).on('move-scroll', '.scroll-container', {}, function(event, scro
 	} else {
 		scroll.css({'top':pos + 'px'});
 	}
+	
+	$('.down-btn').trigger('site.down-btn.reshow', [ pos / _line_h ]);
 	
 });
 
