@@ -25,6 +25,34 @@ $(function() {
 		$('.b-photogallery .b-photo-list').hide();
 		$('.b-photogallery .b-photo-list[data-flt="' + flt + '"]').fadeIn('fast');
 		
+		$('.scroll-container').trigger('init');
+		
+	})
+	
+});
+
+$(function() {
+	
+	$(document.body).on('submit', '._azbn-ajax-form', {}, function(event){
+		event.preventDefault();
+		
+		//$('._czr__loader.page-loader').addClass('active');
+		
+		var form = $(this);
+		var _form = form.serialize();
+		
+		$.post('/formsave/', _form, function(data){
+			
+			// <a href="http://zv.dorohovdesign.ru/gallery/" class="btn-site btn-yellow wow slideInDown url-history" data-wow-delay="1.5s" style="visibility: visible; animation-delay: 1.5s; animation-name: slideInDown;">фотогалерея</a>
+			
+			var a = $('<a/>', {
+				href : '/formsave/result/',
+				class : 'url-history',
+			})
+				.trigger('click');
+			
+		})
+		
 	})
 	
 });

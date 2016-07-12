@@ -32,6 +32,8 @@
 		items.hide();
 		items.filter('[data-flt="' + flt + '"]').fadeIn('fast');
 		
+		$('.scroll-container').trigger('init');
+		
 	});
 	
 	$('.page-content-cont .content-cont .doc-filter a').eq(0).trigger('click.site.page-content-cont.doc-filter.a');
