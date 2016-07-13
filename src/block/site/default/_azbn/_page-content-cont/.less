@@ -228,10 +228,16 @@
 		position:absolute;
 		display:block;
 		right:5em;
+		opacity:0;
+		transition:all @trans-speed ease;
+		transition-delay:@trans-speed * 2;
+		/*
 		animation-name:animated-bear;
 		animation-duration: @trans-speed * 3;
-		animation-delay: @trans-speed * 2;
+		animation-delay: @trans-speed * 5;
 		animation-timing-function: ease;
+		animation-fill-mode:forwards;
+		*/
 		top:5em;
 		#fe.z(15);
 		#fe.w(139px);
@@ -241,6 +247,10 @@
 		#fe.bsize(cover);
 		#site.bi('default/.bear/bear-bg.png');
 		@media @media-device{display: none;}
+		
+		&[data-state="active"] {
+			opacity:1;
+		}
 	}
 	
 	.office-cont {

@@ -2,7 +2,7 @@
 	//$('.page-content-cont').trigger('site.page-content-cont.state', [{state:'active'}]);
 	
 	$('.content-cont.right').attr('data-state', 'default');
-	
+	$('.page-content-cont .bear').attr('data-state', 'active');
 	
 	$(document.body).on('click.site.page-content-cont.close-it', '.page-content-cont .close-it', {}, function(event){
 		event.preventDefault();

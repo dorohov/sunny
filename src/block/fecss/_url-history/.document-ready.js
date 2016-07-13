@@ -12,6 +12,7 @@
 			var preloader = parseInt(btn.attr('data-preloader') || 0);
 			
 			$('.content-cont.right').attr('data-state', 'passive');
+			$('.page-content-cont .bear').attr('data-state', '');
 			
 			if(target && typeof target != 'undefined' && target != 'undefined') {
 				//href = target;

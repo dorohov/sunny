@@ -48,6 +48,8 @@
 				
 				$('._czr__loader.page-loader').removeClass('active');
 				
+				$('.page-content-cont .bear').attr('data-state', 'active');
+				
 			},555);
 			
 			

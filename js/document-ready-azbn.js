@@ -72,6 +72,8 @@ $(function() {
 		$('.hypothec-flt-block').hide();
 		$('.hypothec-flt-block[data-flt="' + flt + '"]').fadeIn('fast');
 		
+		$('.scroll-element').scrollTop(0);
+		
 		$('.scroll-container').trigger('init');
 		
 	});
