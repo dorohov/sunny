@@ -27,6 +27,9 @@
 				//d.find(item[1]).eq(0).attr('data-state', 'active-3');
 				
 				$(item[0]).attr('class', d.find(item[1]).eq(0).attr('class'));
+				
+				$(item[0]).attr('data-page-id', d.find(item[1]).eq(0).attr('data-page-id') || 0);
+				
 				d.empty().remove();
 			}
 			
@@ -43,8 +46,17 @@
 				$('.content-cont.right').attr('data-state', 'default');
 				
 				$(document.body).trigger('site.page-content-cont.b-photogallery.date-filters.restruct');
+				
 				$('.hypothec-switcher-btn').eq(0).trigger('click');
+				
 				//$(document.body).on('site.page-content-cont.b-photogallery.date-filters.reshow', [0]);
+				
+				if($('.page-content-cont').hasClass('gallery-page') && parseInt($('.page-content-cont').attr('data-page-id') || 0) == 5) {
+					$('.page-content-cont .b-photogallery .street-filters a').eq(0).trigger('click');
+				} else if($('.page-content-cont').hasClass('gallery-page')) {
+					$('.page-content-cont .b-photogallery .b-photo-list').hide();
+					$('.page-content-cont .b-photogallery .b-photo-list').eq(0).fadeIn('fast');
+				}
 				
 				$('._czr__loader.page-loader').removeClass('active');
 				
