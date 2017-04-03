@@ -130,6 +130,22 @@ a{
 	@media @media-size-xs{
 		flex-wrap: wrap;
 	}
+	
+	&._cb__flex__azbn-mod {
+		position:absolute;
+		right:@grid_padding * 7;
+		top:4.5em;
+		
+		@media @media-size-sm {
+			position:relative;
+		}
+		
+		._hs__phone a {
+			color:#000;
+			margin-top:0.33em;
+		}
+	}
+	
 }
 .btn-site{
 	border: none;
@@ -350,5 +366,33 @@ h3{
 .doc-page{
 	.down-btn{
 		@media @media-size-lg {display: none;}
+	}
+}
+.content-header__h1 {
+	.__left {
+		float:left;
+		
+		a {
+			font-family: proxima_nova_semibold;
+			color:#000;
+			font-size:20px;
+		}
+		
+	}
+	.__right {
+		float:right;
+		
+		button {
+			font-family: proxima_nova_semibold;
+		}
+		
+	}
+	.__center {
+		
+		@media @media-size-sm {
+			display:block;
+			width:100%;
+		}
+		
 	}
 }
